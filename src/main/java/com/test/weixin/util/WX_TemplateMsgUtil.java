@@ -1,6 +1,7 @@
 package com.test.weixin.util;
 
 import com.alibaba.fastjson.JSONObject;
+import com.test.weixin.config.WXLoginConfig;
 import com.test.weixin.constant.WeiXinEnum;
 import com.test.weixin.model.TemplateData;
 import org.slf4j.Logger;
@@ -95,35 +96,29 @@ public class WX_TemplateMsgUtil {
         return "success";
     }
 
-    public static void main(String[] args) {
-        //新增用户成功 - 推送微信消息
-        //获取用户openId
-        //String openId = getUserOpenId();
-        senMsg("oEouy0nAkmGGZtOM_3wBDWlbOt7k");
-    }
-
     private static String getUserOpenId() {
-        String appId = "wx05279db4a17d80e4";
-        String appSecret = "8825a297b19e913266496b53d524ef31";
+        WXLoginConfig wx=new WXLoginConfig();
+        String appId = wx.appid;
+        String appSecret = wx.appSecret;
         String state="";
         String wxurl = "https://open.weixin.qq.com/connect/oauth2/authorize?appid=" + appId + "&response_type=code&scope=snsapi_userinfo&state=" + state + "#wechat_clientstate";
         JSONObject jsonObject =WX_HttpsUtil.httpsRequest(wxurl, "GET", null);
         return jsonObject.getString("openId");
     }
 
-    private static void senMsg(String openId) {
+    public static void senMsg(String openId) {
         //用户是否订阅该公众号标识 (0代表此用户没有关注该公众号 1表示关注了该公众号)
         Integer state = WX_UserUtil.subscribeState(openId);
         // 绑定了微信并且关注了服务号的用户 , 注册成功-推送注册短信
         if (state == 1) {
             Map<String, TemplateData> param = new HashMap<>();
             param.put("first", new TemplateData("恭喜您注册成功！", "#696969"));
-            param.put("keyword1", new TemplateData("15618551533", "#696969"));
-            param.put("keyword2", new TemplateData("2017年05月06日", "#696969"));
-            param.put("keyword3", new TemplateData("2017年05月06日", "#696969"));
+            param.put("keyword1", new TemplateData("12345678910", "#696969"));
+            param.put("keyword2", new TemplateData("2018年11月06日", "#696969"));
+            param.put("keyword3", new TemplateData("2017年11月06日", "#696969"));
             param.put("remark", new TemplateData("祝投资愉快！", "#696969"));
             //注册的微信-模板Id
-            String regTempId = 	"Hr8fNUoMXH7kkotOMF1Hmm74QZ00qwBZjsp-4u5Pbrc";//getWXTemplateMsgId(WeiXinEnum.WX_TEMPLATE_MSG_NUMBER.USER_REGISTER_SUCCESS.getMsgNumber());
+            String regTempId = 	"SLN5wKRThwDAYxWF1b328g4jXH_Ylbgr36e82aaPddQ";//getWXTemplateMsgId(WeiXinEnum.WX_TEMPLATE_MSG_NUMBER.USER_REGISTER_SUCCESS.getMsgNumber());
             //调用发送微信消息给用户的接口
             WX_TemplateMsgUtil.sendWechatMsgToUser(openId, regTempId, "", "#000000", packJsonmsg(param));
         }

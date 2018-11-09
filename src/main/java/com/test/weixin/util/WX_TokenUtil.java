@@ -6,8 +6,10 @@ import com.test.common.cache.Cache;
 import com.test.common.cache.CacheManager;
 import com.test.weixin.config.WXLoginConfig;
 import com.test.weixin.constant.WeiXinEnum;
+import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import redis.clients.jedis.Jedis;
 
 /**
  * 描述:
@@ -26,10 +28,14 @@ public class WX_TokenUtil {
      * （此处我是把token存在Redis里面了）
      */
     public static String getWXToken() {
-        Cache cache = CacheManager.getCacheInfo(WeiXinEnum.CACHE_TYPE.CACHE_WX_ACCESS_TOKEN.name());
-        String access_token = "";
-        if (cache != null) {
-            access_token = (String) cache.getValue();
+        //Cache cache = CacheManager.getCacheInfo(WeiXinEnum.CACHE_TYPE.CACHE_WX_ACCESS_TOKEN.name());
+        Jedis jedis = new Jedis("localhost");
+        System.out.println("连接成功");
+        String access_token = jedis.get(WeiXinEnum.CACHE_TYPE.CACHE_WX_ACCESS_TOKEN.name());
+        //String access_token = "";
+        //if (cache != null) {
+        if(StringUtils.isNoneEmpty(access_token)){
+            //access_token = (String) cache.getValue();
             return access_token;
 
         }else{
@@ -45,7 +51,8 @@ public class WX_TokenUtil {
                     cacheNew.setKey(WeiXinEnum.CACHE_TYPE.CACHE_WX_ACCESS_TOKEN.name());
                     cacheNew.setTimeOut(Integer.valueOf(jsonObject.getString("expires_in")));
                     cacheNew.setValue(access_token);
-                    CacheManager.putCache(WeiXinEnum.CACHE_TYPE.CACHE_WX_ACCESS_TOKEN.name(), cacheNew);
+                    jedis.set(WeiXinEnum.CACHE_TYPE.CACHE_WX_ACCESS_TOKEN.name(), access_token,"NX", "EX", Integer.valueOf(jsonObject.getString("expires_in")));
+                    //CacheManager.putCache(WeiXinEnum.CACHE_TYPE.CACHE_WX_ACCESS_TOKEN.name(), cacheNew);
                     return access_token;
                 } catch (JSONException e) {
                     access_token = null;

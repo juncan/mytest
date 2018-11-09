@@ -19,7 +19,6 @@ public class WXLoginConfig {
 	
 	public WXLoginConfig() {
 		//super();
-		// TODO Auto-generated constructor stub
 		try {
 			SAXBuilder sb = new SAXBuilder();
 			String xmlPath= null;
@@ -35,13 +34,10 @@ public class WXLoginConfig {
 			this.appSecret=config.getChildText("appSecret");
 			
 		} catch (FileNotFoundException e1) {
-			// TODO Auto-generated catch block
 			e1.printStackTrace();
 		} catch (JDOMException e1) {
-			// TODO Auto-generated catch block
 			e1.printStackTrace();
 		} catch (IOException e1) {
-			// TODO Auto-generated catch block
 			e1.printStackTrace();
 		}
 	}
