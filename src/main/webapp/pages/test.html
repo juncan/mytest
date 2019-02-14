@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>netty-socketio测试</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js"></script>
+    <script src="http://code.jquery.com/jquery-3.2.1.js "></script>
+    <script>
+        $(function(){
+            var socket =  io.connect('http://127.0.0.1:8082');
+            //监听名为pushpoint的事件，这与服务端推送的那个事件名称必须一致
+            socket.on("pushpoint", function(data){
+                $('#x').text(data);
+
+            });
+        });
+
+    </script>
+</head>
+
+<body>
+
+<div id="display" style="height:50px;background-color:blue;vertical-align: middle;text-align: center; margin: auto;  ">
+    <span id="x" style="color:#FFFFFF"></span>
+</div>
+
+</body>
+
+</html>

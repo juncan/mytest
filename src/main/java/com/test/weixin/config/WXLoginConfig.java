@@ -15,6 +15,9 @@ public class WXLoginConfig {
 	public static String appid;
 	public static String appSecret;
 	public static String apiUrl;
+	public static String mchId;
+	public static String key;
+	public static String notifyUrl;
 	
 	
 	public WXLoginConfig() {
@@ -32,7 +35,9 @@ public class WXLoginConfig {
 			Element config=doc.getRootElement();
 			this.appid=config.getChildText("appid");
 			this.appSecret=config.getChildText("appSecret");
-			
+			this.mchId = config.getChildText("mchid");
+			this.key = config.getChildText("key");
+			this.notifyUrl = config.getChildText("notifyUrl");
 		} catch (FileNotFoundException e1) {
 			e1.printStackTrace();
 		} catch (JDOMException e1) {

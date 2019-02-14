@@ -4,4 +4,10 @@
 	<appid>wx006f4136afbb33fc</appid>
 	<!-- 微信公众号appSecret -->
 	<appSecret>3d22b3953b4847375156ef9c5de5f8c4</appSecret>
+	<!--微信商户号-->
+	<mchid></mchid>
+	<!--微信秘钥-->
+	<key></key>
+	<!--微信接口回调地址-->
+	<notifyUrl>http://api.demo.com/api/payment/wxpay/notify</notifyUrl>
 </root>

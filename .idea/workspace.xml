@@ -2,25 +2,75 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6e3d4482-8fb4-4acf-9fa9-6d112765d2b9" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/push/huawei/HwPush.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/push/jiguan/Client.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/push/jiguan/Constant.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/push/jiguan/JgPush.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/push/jiguan/JpushDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/push/xiaomi/Constant.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/push/xiaomi/PushResult.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/push/xiaomi/XmPush.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/test/weixin/Client.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/cbf4life/Interprer/AddExpression.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/cbf4life/Interprer/Calculator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/cbf4life/Interprer/Client.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/cbf4life/Interprer/Expression.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/cbf4life/Interprer/SubExpression.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/cbf4life/Interprer/SymbolExpression.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/cbf4life/Interprer/VarExpreession.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/cbf4life/Mediator/AbstractColleague.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/cbf4life/Mediator/AbstractMediator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/cbf4life/Mediator/Client.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/cbf4life/Mediator/Mediator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/cbf4life/Mediator/Sale.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/cbf4life/Mediator/Stock.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/cbf4life/prototype/AdvTemplate.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/cbf4life/prototype/Client.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/cbf4life/prototype/Mail.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/cbf4life/prototype/Thing.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/cbf4life/prototype/ThingClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/test/aliyun/Client.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/test/aliyun/SendSms.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/test/aliyun/SmsReqDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/test/database/AnalysisDatabaseStructure.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/test/database/TableAttruibute.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/test/excel/Client.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/test/excel/ExcelReadUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/test/excel/ExportExcelUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/test/excel/ExportExcelUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/test/excel/PoiTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/test/excel/Record.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/test/memcached/Client.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/test/memcached/MemcachedConnection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/test/memcached/MemcachedConnectionList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/test/memcached/MemcachedQueryHelper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/test/mongoDB/Client.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/test/netty/EchoClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/test/netty/EchoClientHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/test/netty/EchoServer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/test/netty/EchoServerHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/test/redis/Client.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/test/redis/RedisConnection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/test/redis/RedisHelper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/test/redis/message/Client.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/test/redis/message/Publisher.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/test/redis/message/SubThread.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/test/redis/message/Subscriber.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/test/setting/QueryServiceConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/test/websocket/EventListenner.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/test/weixin/pay/WxPayInfoResp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/test/weixin/pay/WxPayNotifyResult.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/test/weixin/pay/WxUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/test/weixin/pay/service/WeChatpayService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/test/weixin/pay/service/impl/WeChatPayServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/test/zookeeper/Client.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/test/zookeeper/ConnectionWatcher.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/test/zookeeper/CreateGroup.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/test/zookeeper/DeleteGroup.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/QueryService.config" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/test.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cbf4life/strategy/ZhaoYun.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cbf4life/strategy/ZhaoYun.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/test/weixin/config/WXLoginConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/test/weixin/config/WXLoginConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/test/weixin/util/WX_TemplateMsgUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/test/weixin/util/WX_TemplateMsgUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/test/weixin/util/WX_TokenUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/test/weixin/util/WX_TokenUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/wxlogin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/wxlogin.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/Client.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cbf4life/strategy/ZhaoYun.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cbf4life/strategy/ZhaoYun.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/test/weixin/config/WXLoginConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/test/weixin/config/WXLoginConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/test/weixin/util/WX_TemplateMsgUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/test/weixin/util/WX_TemplateMsgUtil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/test/weixin/util/WX_TokenUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/test/weixin/util/WX_TokenUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/wxlogin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/wxlogin.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -31,22 +81,87 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="MemcachedQueryHelper.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/test/memcached/MemcachedQueryHelper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="497">
+              <caret line="181" column="23" selection-start-line="181" selection-start-column="16" selection-end-line="181" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="QueryService.config" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/QueryService.config">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="242">
+              <caret line="11" column="31" lean-forward="true" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="45" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Client.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/test/memcached/Client.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="453">
+              <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="QueryServiceConfig.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/test/setting/QueryServiceConfig.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="118">
+              <caret line="163" selection-start-line="163" selection-end-line="163" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MemcachedConnectionList.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/test/memcached/MemcachedConnectionList.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="65" selection-start-line="65" selection-end-line="65" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="FxmlFile" />
         <option value="Kotlin File" />
-        <option value="HTML File" />
+        <option value="FxmlFile" />
         <option value="Class" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
       <find>\/\*for \(Map\.Entry\&lt;Character\, Integer\&gt; entry \: hm\.entrySet\(\)\) \{\n            if\(entry\.getValue\(\)\!\=1\)\{\n                repeat \+\= entry\.getValue\(\)\;\n            \}\n\n        \}\*\/</find>
+      <find>uriConfigFile</find>
+      <find>configFile</find>
+      <find>RedisSection</find>
+      <find>serialVersionUID</find>
+      <find>QueryService.config</find>
+      <find>redis.clients</find>
+      <find>poi</find>
+      <find>readSections</find>
+      <find>useMemcached</find>
+      <find>MemcachedConnection</find>
+      <find>MemcachedSection</find>
+      <find>MemcachedConnectionList</find>
+      <find>getInstance</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -55,57 +170,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/cbf4life/chain/Husband.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/cbf4life/chain/Son.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/cbf4life/chain/Client.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/cbf4life/chain/Handler.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/cbf4life/chain/change/Father.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/cbf4life/chain/change/Husband.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/cbf4life/chain/change/Son.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/cbf4life/chain/change/Woman.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/cbf4life/chain/change/Client.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/test/image/ImgUtils.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/test/image/FileUtil.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/test/image/ImageUtils.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/test/image/Client.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/core/utils/IdCardCheckUtil.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/pages/upload.html" />
-        <option value="$PROJECT_DIR$/src/main/java/com/test/github/DuplicateEncoder.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/cbf4life/visitor/CommonEmployee.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/cbf4life/visitor/Employee.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/cbf4life/visitor/Manager.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/cbf4life/visitor/IVisitor.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/cbf4life/visitor/Visitor.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/cbf4life/visitor/Client.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/cbf4life/state/ILift.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/cbf4life/state/Lift.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/cbf4life/state/LIftState.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/cbf4life/state/OpenningState.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/cbf4life/state/Context.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/cbf4life/state/ClosingState.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/cbf4life/state/RunningState.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/cbf4life/state/StoopingState.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/cbf4life/state/StopingState.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/cbf4life/state/Client.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/export/fxd/java/TestDoc.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/push/xiaomi/Constant.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/push/xiaomi/PushResult.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/push/xiaomi/XmPush.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/Client.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/push/huawei/HwPush.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/push/jiguan/Jgpush.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/push/jiguan/Const.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/push/jiguan/JpushDto.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/push/jiguan/Constant.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/push/jiguan/JgPush.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/push/jiguan/Client.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/weixin/TemplateMessage.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/test/weixin/config/WXLoginConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/cbf4life/Mediator/Sale.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/cbf4life/Mediator/Client.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/cbf4life/Mediator/AbstractMediator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/cbf4life/Interprer/Expression.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/cbf4life/Interprer/VarExpreession.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/cbf4life/Interprer/SymbolExpression.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/cbf4life/Interprer/AddExpression.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/cbf4life/Interprer/SubExpression.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/cbf4life/Interprer/Calculator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/cbf4life/Interprer/Client.java" />
         <option value="$PROJECT_DIR$/src/main/resources/wxlogin.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/test/weixin/util/WX_TemplateMsgUtil.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/test/weixin/Client.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/test/weixin/util/WX_TokenUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/test/weixin/pay/WxUtils.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/test/weixin/pay/service/weChatpayService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/test/weixin/config/WXLoginConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/test/weixin/pay/service/impl/weChatPayServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/test/weixin/pay/service/impl/WeChatPayServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/test/redis/RedisKeysMg.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/test/QueryServiceConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/test/redis/RedisConnection.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/test/redis/Client.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/test/redis/RedisHelper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/test/database/AnalysisDatabaseStructure.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/Client.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/test/mongoDB/Client.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/test/redis/message/Publisher.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/test/redis/message/Subscriber.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/test/redis/message/SubThread.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/test/redis/message/Client.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/test/excel/ExportExcelUtils.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/test/excel/PoiTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/test/excel/ExportExcelUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/test/memcached/MemcachedConnection.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/test/database/TableAttruibute.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/test/zookeeper/ConnectionWatcher.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/test/zookeeper/DeleteGroup.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/test/zookeeper/CreateGroup.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/test/zookeeper/Client.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/test/netty/EchoServerHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/test/netty/EcoClient.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/test/netty/EchoClient.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/test/netty/EchoClientHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/test/netty/EchoServer.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/QueryService.config" />
+        <option value="$PROJECT_DIR$/src/main/java/com/test/setting/QueryServiceConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/test/memcached/MemcachedConnectionList.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/pages/test.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/test/websocket/EventListenner.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/cbf4life/strategy/ZhaoYun.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/test/memcached/MemcachedQueryHelper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/test/memcached/Client.java" />
       </list>
     </option>
   </component>
@@ -119,10 +234,10 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="465" />
-    <option name="y" value="115" />
-    <option name="width" value="1750" />
-    <option name="height" value="970" />
+    <option name="x" value="730" />
+    <option name="y" value="150" />
+    <option name="width" value="1555" />
+    <option name="height" value="785" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -132,7 +247,6 @@
     <panes>
       <pane id="PackagesPane" />
       <pane id="AndroidView" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -183,17 +297,7 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="redis" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mytest" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mytest" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="weixin" type="462c0819:PsiDirectoryNode" />
+              <item name="memcached" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="mytest" type="b2602c69:ProjectViewProjectNode" />
@@ -206,6 +310,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -215,13 +320,17 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="Errors" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.cbf4life.abstractfactory" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\工作材料\java学习\mytest\src\main\java\com\test\excel" />
+      <recent name="E:\工作材料\java学习\mytest\src\main\resources" />
       <recent name="E:\工作材料\java学习\mytest\src\main\java\com\test" />
+      <recent name="E:\工作材料\java学习\mytest\src\main\java\com\test\redis" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -236,69 +345,69 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Client (2)">
-    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.cbf4life.adapter.App" />
-      <module name="mytest" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.cbf4life.adapter.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-    </configuration>
+  <component name="RunManager" selected="Application.Client (1)">
     <configuration name="Client (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.push.jiguan.Client" />
+      <option name="MAIN_CLASS_NAME" value="com.test.memcached.Client" />
       <module name="mytest" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.push.jiguan.*" />
+          <option name="PATTERN" value="com.test.memcached.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
     </configuration>
-    <configuration name="Client (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.test.weixin.Client" />
+    <configuration name="Client (4)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.cbf4life.prototype.Client" />
       <module name="mytest" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.test.weixin.*" />
+          <option name="PATTERN" value="com.cbf4life.prototype.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
     </configuration>
-    <configuration name="Client (5)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.Client" />
+    <configuration name="EchoClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.test.netty.EchoClient" />
       <module name="mytest" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.*" />
+          <option name="PATTERN" value="com.test.netty.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
     </configuration>
-    <configuration name="Client" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.cbf4life.visitor.Client" />
+    <configuration name="EchoServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.test.netty.EchoServer" />
       <module name="mytest" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.cbf4life.visitor.*" />
+          <option name="PATTERN" value="com.test.netty.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
     </configuration>
-    <configuration name="Client" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.cbf4life.state.Client" />
+    <configuration name="EventListenner" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.test.websocket.EventListenner" />
       <module name="mytest" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.cbf4life.state.*" />
+          <option name="PATTERN" value="com.test.websocket.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+    </configuration>
+    <configuration name="ZhaoYun" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.cbf4life.strategy.ZhaoYun" />
+      <module name="mytest" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.cbf4life.strategy.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -345,19 +454,19 @@
       <listeners />
     </configuration>
     <list>
-      <item itemvalue="Application.Client (5)" />
-      <item itemvalue="Application.Client" />
-      <item itemvalue="Application.App" />
+      <item itemvalue="Application.EchoServer" />
+      <item itemvalue="Application.EchoClient" />
       <item itemvalue="Application.Client (1)" />
-      <item itemvalue="Application.Client (2)" />
+      <item itemvalue="Application.EventListenner" />
+      <item itemvalue="Application.ZhaoYun" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Client (2)" />
         <item itemvalue="Application.Client (1)" />
-        <item itemvalue="Application.Client (5)" />
-        <item itemvalue="Application.App" />
-        <item itemvalue="Application.Client" />
+        <item itemvalue="Application.ZhaoYun" />
+        <item itemvalue="Application.EventListenner" />
+        <item itemvalue="Application.EchoClient" />
+        <item itemvalue="Application.EchoServer" />
       </list>
     </recent_temporary>
   </component>
@@ -413,19 +522,65 @@
       <workItem from="1541558528967" duration="4529000" />
       <workItem from="1541581474107" duration="1828000" />
       <workItem from="1541640514692" duration="15296000" />
-      <workItem from="1541729500026" duration="2546000" />
+      <workItem from="1541729500026" duration="15275000" />
+      <workItem from="1541816325997" duration="7588000" />
+      <workItem from="1541842978763" duration="3873000" />
+      <workItem from="1541899524124" duration="2933000" />
+      <workItem from="1541919575629" duration="2936000" />
+      <workItem from="1541983418975" duration="3232000" />
+      <workItem from="1541989856739" duration="11346000" />
+      <workItem from="1542069921199" duration="2865000" />
+      <workItem from="1542156347858" duration="973000" />
+      <workItem from="1542242935500" duration="790000" />
+      <workItem from="1542507815562" duration="1256000" />
+      <workItem from="1542529097234" duration="45000" />
+      <workItem from="1542890067125" duration="1792000" />
+      <workItem from="1542933865505" duration="601000" />
+      <workItem from="1543222402710" duration="3839000" />
+      <workItem from="1543232875097" duration="10260000" />
+      <workItem from="1543280257736" duration="2190000" />
+      <workItem from="1543407239738" duration="2924000" />
+      <workItem from="1543452303303" duration="7070000" />
+      <workItem from="1543558018294" duration="399000" />
+      <workItem from="1543562874051" duration="3764000" />
+      <workItem from="1543631057153" duration="722000" />
+      <workItem from="1543677729355" duration="2138000" />
+      <workItem from="1543736786531" duration="5202000" />
+      <workItem from="1543797923830" duration="14000" />
+      <workItem from="1543990120866" duration="3958000" />
+      <workItem from="1544057125498" duration="106000" />
+      <workItem from="1544057289663" duration="645000" />
+      <workItem from="1544173229440" duration="1210000" />
+      <workItem from="1544406066150" duration="898000" />
+      <workItem from="1544436319699" duration="736000" />
+      <workItem from="1544489462240" duration="6494000" />
+      <workItem from="1544595947558" duration="3668000" />
+      <workItem from="1544945467797" duration="6548000" />
+      <workItem from="1545010392340" duration="2676000" />
+      <workItem from="1545103839428" duration="696000" />
+      <workItem from="1547275466941" duration="601000" />
+      <workItem from="1547513302323" duration="1621000" />
+      <workItem from="1548143510763" duration="5000" />
+      <workItem from="1548205370348" duration="4759000" />
+      <workItem from="1548290643637" duration="14151000" />
+      <workItem from="1548380717502" duration="3736000" />
+      <workItem from="1548726281932" duration="1206000" />
+      <workItem from="1548989553401" duration="1145000" />
+      <workItem from="1549932342125" duration="588000" />
+      <workItem from="1550043637504" duration="5389000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="162154000" />
+    <option name="totallyTimeSpent" value="314471000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="5" />
       <window_info anchor="bottom" id="TODO" order="12" />
-      <window_info anchor="bottom" id="Messages" order="5" weight="0.38801712" />
+      <window_info anchor="bottom" id="Messages" order="5" weight="0.3837375" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info id="Image Layers" order="6" />
       <window_info anchor="bottom" id="Java Enterprise" order="2" />
@@ -434,19 +589,19 @@
       <window_info anchor="right" id="Maven Projects" order="2" />
       <window_info anchor="bottom" id="Database Changes" order="3" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="4" />
-      <window_info anchor="bottom" id="Run" order="8" />
+      <window_info anchor="bottom" id="Run" order="8" weight="0.32952926" />
       <window_info anchor="bottom" id="Terminal" order="0" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="0" />
-      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.28217158" />
-      <window_info id="Web" order="4" side_tool="true" />
+      <window_info content_ui="combo" id="Project" order="5" weight="0.2647453" />
+      <window_info id="Web" order="4" side_tool="true" weight="0.3297587" />
       <window_info anchor="right" id="Database" order="1" />
       <window_info id="Structure" order="7" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="7" weight="0.25" />
       <window_info id="UI Designer" order="1" />
       <window_info anchor="right" id="Theme Preview" order="4" />
       <window_info id="Favorites" order="3" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="9" sideWeight="0.49865952" visible="true" weight="0.25392297" />
+      <window_info anchor="bottom" id="Debug" order="9" sideWeight="0.49865952" weight="0.4208274" />
       <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="6" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
@@ -458,7 +613,7 @@
       <window_info id="Designer" order="0" />
       <window_info anchor="right" id="Palette" order="5" />
       <window_info id="Image Layers" order="6" />
-      <window_info anchor="bottom" id="Run" order="8" />
+      <window_info anchor="bottom" id="Run" order="8" weight="0.32952926" />
       <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="7" weight="0.25" />
       <window_info id="UI Designer" order="1" />
@@ -468,23 +623,23 @@
       <window_info anchor="right" id="Capture Analysis" order="0" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="6" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Event Log" order="1" sideWeight="0.5013405" side_tool="true" weight="0.2962963" />
-      <window_info anchor="bottom" id="Messages" order="5" weight="0.38801712" />
       <window_info anchor="bottom" id="TODO" order="12" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="8" weight="0.25" />
+      <window_info anchor="right" id="Database" order="1" />
       <window_info anchor="bottom" id="Java Enterprise" order="2" />
       <window_info anchor="bottom" id="Database Changes" order="3" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="4" />
       <window_info anchor="right" id="Maven Projects" order="2" />
-      <window_info anchor="bottom" id="Find" order="7" weight="0.3266762" />
-      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.28217158" />
-      <window_info anchor="right" id="Database" order="1" />
+      <window_info content_ui="combo" id="Project" order="5" visible="true" weight="0.2647453" />
+      <window_info anchor="bottom" id="Messages" order="5" weight="0.3837375" />
       <window_info anchor="bottom" id="Message" order="6" />
-      <window_info id="Web" order="4" side_tool="true" />
+      <window_info id="Web" order="4" side_tool="true" weight="0.3297587" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info anchor="right" id="Theme Preview" order="4" />
       <window_info id="Structure" order="7" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
-      <window_info anchor="bottom" id="Debug" order="9" sideWeight="0.49865952" weight="0.25392297" />
+      <window_info anchor="bottom" id="Find" order="7" weight="0.3266762" />
+      <window_info active="true" anchor="bottom" id="Debug" order="9" sideWeight="0.49865952" visible="true" weight="0.4208274" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -496,12 +651,6 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/test/redis/RdisStringJava.java</url>
-          <line>13</line>
-          <properties />
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/cbf4life/strategy/ZhaoYun.java</url>
           <line>17</line>
@@ -515,22 +664,111 @@
           <option name="timeStamp" value="27" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/test/weixin/util/WX_TokenUtil.java</url>
-          <line>31</line>
+          <url>file://$PROJECT_DIR$/src/main/java/com/test/aliyun/Client.java</url>
+          <line>18</line>
           <properties />
-          <option name="timeStamp" value="33" />
+          <option name="timeStamp" value="34" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/test/aliyun/SendSms.java</url>
+          <line>24</line>
+          <properties />
+          <option name="timeStamp" value="35" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/test/excel/ExcelReadUtil.java</url>
+          <line>46</line>
+          <properties />
+          <option name="timeStamp" value="40" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/cbf4life/Interprer/Client.java</url>
+          <line>38</line>
+          <properties />
+          <option name="timeStamp" value="45" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/cbf4life/Interprer/Calculator.java</url>
+          <line>18</line>
+          <properties />
+          <option name="timeStamp" value="47" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/cbf4life/Interprer/Calculator.java</url>
+          <line>50</line>
+          <properties />
+          <option name="timeStamp" value="48" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/cbf4life/Interprer/AddExpression.java</url>
+          <line>18</line>
+          <properties />
+          <option name="timeStamp" value="49" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/cbf4life/Interprer/Calculator.java</url>
+          <line>44</line>
+          <properties />
+          <option name="timeStamp" value="50" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/test/weixin/pay/WxUtils.java</url>
+          <line>38</line>
+          <properties />
+          <option name="timeStamp" value="52" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/test/redis/RedisHelper.java</url>
+          <line>378</line>
+          <properties />
+          <option name="timeStamp" value="63" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/test/database/AnalysisDatabaseStructure.java</url>
+          <line>50</line>
+          <properties />
+          <option name="timeStamp" value="70" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/test/mongoDB/Client.java</url>
+          <line>18</line>
+          <properties />
+          <option name="timeStamp" value="72" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/test/zookeeper/ConnectionWatcher.java</url>
+          <line>41</line>
+          <properties />
+          <option name="timeStamp" value="83" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/test/zookeeper/ConnectionWatcher.java</url>
+          <line>25</line>
+          <properties />
+          <option name="timeStamp" value="84" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/test/zookeeper/Client.java</url>
+          <line>19</line>
+          <properties />
+          <option name="timeStamp" value="87" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/test/websocket/EventListenner.java</url>
+          <line>29</line>
+          <properties />
+          <option name="timeStamp" value="99" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="34" />
+      <option name="time" value="101" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
-        <watch expression="(allClass.get(i)" />
-        <watch expression="file.getName().substring(0, file.getName().length() - 6)" />
-        <watch expression="file.getName()" />
-        <watch expression="one.equals(&quot;(&quot;)" language="JAVA" />
-        <watch expression="word.lastIndexOf(ch)" />
-        <watch expression="word.indexOf(ch)" />
+        <watch expression="meta.getColumnName(0)" />
+        <watch expression="rstable.getMetaData()" />
+        <watch expression="rstable.wasNull()" />
+        <watch expression="data.getColumnTypeName(i)" />
+        <watch expression="temp.asXML()" />
       </configuration>
     </watches-manager>
   </component>
@@ -549,349 +787,389 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cbf4life/abstractfactory/HumanFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cbf4life/abstractfactory/AbstractHumanFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cbf4life/abstractfactory/HumanEnum.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cbf4life/abstractfactory/FemalHumanFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="11" column="48" lean-forward="true" selection-start-line="11" selection-start-column="48" selection-end-line="11" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cbf4life/adapter/App.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="18" column="37" selection-start-line="18" selection-start-column="37" selection-end-line="18" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cbf4life/adapter/IOuterUser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cbf4life/adapter/IUserInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cbf4life/adapter/OuterUser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cbf4life/adapter/OuterUserInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="11" column="36" selection-start-line="11" selection-start-column="36" selection-end-line="11" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cbf4life/bridge/House.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cbf4life/bridge/Client.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="638">
-          <caret line="29" column="15" selection-start-line="29" selection-start-column="15" selection-end-line="29" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cbf4life/bridge/UpHouseCrop.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="8" column="35" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cbf4life/bridge/UpCrop.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="23" column="23" selection-start-line="23" selection-start-column="23" selection-end-line="23" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cbf4life/bridge/Clothes.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="15" column="16" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cbf4life/bridge/IPod.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cbf4life/bridge/IPodCorp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cbf4life/bridge/Product.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="13" column="25" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/export/fxd/java/TestDoc.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/export/fxd/java/PdfUtil.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cbf4life/bridge/ShanZhaiCrop.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="28" lean-forward="true" selection-start-column="28" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/core/utils/IdCardCheckUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/test/github/DuplicateEncoder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1804">
-          <caret line="85" column="27" selection-start-line="85" selection-start-column="27" selection-end-line="85" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/test/image/FileUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="20" column="37" selection-start-line="20" selection-start-column="37" selection-end-line="20" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/test/image/ImageUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/push/xiaomi/Constant.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="28" column="20" selection-start-line="28" selection-start-column="20" selection-end-line="28" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/push/xiaomi/XmPush.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1518">
-          <caret line="80" column="13" selection-start-line="80" selection-start-column="13" selection-end-line="80" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/Client.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="303">
-          <caret line="47" selection-start-line="47" selection-end-line="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/push/huawei/HwPush.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="303">
-          <caret line="22" column="1" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/push/xiaomi/PushResult.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-110">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="67" column="18" selection-start-line="67" selection-start-column="18" selection-end-line="67" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/push/jiguan/JpushDto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="497">
-          <caret line="62" column="20" selection-start-line="62" selection-start-column="20" selection-end-line="62" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/push/jiguan/Constant.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="13" column="17" selection-start-line="13" selection-start-column="12" selection-end-line="13" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/push/jiguan/JgPush.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-9">
-          <caret line="16" column="31" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/push/jiguan/Client.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="22" selection-start-line="22" selection-end-line="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/weixin/TemplateMessage.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/test/weixin/model/TemplateData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/test/weixin/model/TemplateMessage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/test/weixin/manager/MyX509TrustManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/test/common/cache/CacheManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="283">
-          <caret line="100" column="40" lean-forward="true" selection-start-line="100" selection-start-column="40" selection-end-line="100" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/test/Client.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/dom4j/dom4j/1.6.1/dom4j-1.6.1.jar!/org/dom4j/tree/DefaultDocument.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="131">
-          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+          <caret line="64" selection-start-line="64" selection-end-line="64" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/wxlogin.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/target/classes/QueryService.config">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/test/weixin/util/WX_HttpsUtil.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/test/redis/RedisConnection.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="484">
-          <caret line="36" column="95" selection-start-line="36" selection-start-column="95" selection-end-line="36" selection-end-column="95" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://E:/Program Files/Java/jdk1.8.0_171/src.zip!/java/lang/Enum.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1056">
-          <caret line="75" column="24" selection-start-line="75" selection-start-column="24" selection-end-line="75" selection-end-column="24" />
-          <folding>
-            <element signature="e#2036#2037#0" expanded="true" />
-            <element signature="e#2063#2064#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/test/weixin/constant/WeiXinEnum.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="20" selection-start-line="20" selection-end-line="20" />
+        <state relative-caret-position="1936">
+          <caret line="118" column="34" selection-start-line="118" selection-start-column="34" selection-end-line="118" selection-end-column="34" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/test/redis/RdisStringJava.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="18" column="5" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
+        <state relative-caret-position="374">
+          <caret line="17" column="67" selection-start-line="17" selection-start-column="67" selection-end-line="17" selection-end-column="67" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/redis/clients/jedis/2.9.0/jedis-2.9.0.jar!/redis/clients/jedis/Jedis.class">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/test/redis/RedisHelper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="27522">
-          <caret line="1312" column="18" selection-start-line="1312" selection-start-column="18" selection-end-line="1312" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/test/weixin/util/WX_TemplateMsgUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="19" column="31" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/test/weixin/util/WX_UserUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/test/weixin/config/WXLoginConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="19" column="19" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/test/weixin/Client.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="365">
-          <caret line="17" column="52" selection-start-line="17" selection-start-column="52" selection-end-line="17" selection-end-column="52" />
+        <state relative-caret-position="7986">
+          <caret line="391" column="21" selection-start-line="391" selection-start-column="21" selection-end-line="391" selection-end-column="21" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/test/weixin/util/WX_TokenUtil.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/test/weixin/pay/WxPayInfoResp.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="267">
-          <caret line="36" selection-start-line="36" selection-end-line="36" />
+        <state relative-caret-position="220">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/test/weixin/pay/service/WeChatpayService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="14" column="33" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/test/weixin/pay/WxUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="32" column="22" selection-start-line="32" selection-start-column="22" selection-end-line="32" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/test/weixin/pay/service/impl/WeChatPayServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="39" column="32" selection-start-line="39" selection-start-column="32" selection-end-line="39" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/test/Client.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/test/redis/message/Client.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="484">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/test/redis/message/Publisher.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="484">
+          <caret line="29" selection-start-line="29" selection-end-line="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/test/redis/message/SubThread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="506">
+          <caret line="24" selection-start-line="24" selection-end-line="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/test/redis/message/Subscriber.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/poi/poi/3.16/poi-3.16.jar!/org/apache/poi/hssf/usermodel/HSSFWorkbook.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="409" column="16" selection-start-line="409" selection-start-column="16" selection-end-line="409" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/test/excel/ExportExcelUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="3" selection-start-line="3" selection-end-line="3" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/test/excel/PoiTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="411">
+          <caret line="28" column="55" selection-start-line="28" selection-start-column="12" selection-end-line="28" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/test/excel/ExportExcelUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="32" column="16" selection-start-line="32" selection-start-column="16" selection-end-line="32" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://E:/Program Files/Java/jdk1.8.0_171/src.zip!/java/sql/ResultSetMetaData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="219" column="21" selection-start-line="219" selection-start-column="8" selection-end-line="219" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/test/mongoDB/Client.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="638">
+          <caret line="35" selection-start-line="35" selection-end-line="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://E:/Program Files/Java/jdk1.8.0_171/src.zip!/java/lang/StringBuffer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2002">
+          <caret line="114" column="11" selection-start-line="114" selection-start-column="11" selection-end-line="114" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/test/database/TableAttruibute.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="65">
+          <caret line="50" column="5" selection-start-line="50" selection-start-column="5" selection-end-line="50" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/test/database/AnalysisDatabaseStructure.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="19" column="86" selection-start-line="19" selection-start-column="66" selection-end-line="19" selection-end-column="86" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/Client.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="607">
+          <caret line="56" column="4" selection-start-line="56" selection-start-column="4" selection-end-line="95" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/test/zookeeper/CreateGroup.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="18" column="1" lean-forward="true" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/test/zookeeper/Client.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="343">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/test/zookeeper/ConnectionWatcher.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="277">
+          <caret line="32" column="7" lean-forward="true" selection-start-line="32" selection-start-column="7" selection-end-line="32" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/test/zookeeper/DeleteGroup.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="506">
+          <caret line="23" column="5" lean-forward="true" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/io/netty/netty-all/4.1.6.Final/netty-all-4.1.6.Final.jar!/io/netty/handler/codec/bytes/ByteArrayEncoder.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="15" column="11" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/test/netty/EchoClientHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-97">
+          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/test/netty/EchoServerHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="616">
+          <caret line="34" column="13" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/test/netty/EchoServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="77">
+          <caret line="53" column="45" selection-start-line="53" selection-start-column="45" selection-end-line="53" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/test/netty/EchoClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-163">
+          <caret line="51" column="55" lean-forward="true" selection-start-line="51" selection-start-column="55" selection-end-line="51" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/test/redis/Client.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="23" column="56" selection-start-line="23" selection-start-column="56" selection-end-line="23" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/test/memcached/MemcachedConnection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1584">
+          <caret line="74" selection-start-line="74" selection-end-line="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4356">
+          <caret line="198" column="13" selection-start-line="198" selection-start-column="13" selection-end-line="198" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/test.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="11" column="32" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/test/websocket/EventListenner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="770">
+          <caret line="41" column="35" selection-start-line="41" selection-start-column="21" selection-end-line="41" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cbf4life/adapter/App.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cbf4life/strategy/GivenGreenLight.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cbf4life/strategy/Istrategy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cbf4life/strategy/ZhaoYun.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cbf4life/strategy/BlockEnemy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cbf4life/strategy/Context.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
+          <folding>
+            <element signature="e#381#382#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cbf4life/strategy/BackDoor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+          <folding>
+            <element signature="e#226#227#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/test/setting/QueryServiceConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="118">
+          <caret line="163" selection-start-line="163" selection-end-line="163" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/QueryService.config">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="11" column="31" lean-forward="true" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/googlecode/xmemcached/xmemcached/1.4.3/xmemcached-1.4.3.jar!/net/rubyeye/xmemcached/MemcachedClient.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="87" column="23" selection-start-line="87" selection-start-column="23" selection-end-line="87" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/test/memcached/MemcachedConnectionList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="65" selection-start-line="65" selection-end-line="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/test/memcached/MemcachedQueryHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="497">
+          <caret line="181" column="23" selection-start-line="181" selection-start-column="16" selection-end-line="181" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/test/memcached/Client.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="453">
+          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

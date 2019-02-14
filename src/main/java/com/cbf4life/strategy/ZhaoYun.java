@@ -21,7 +21,7 @@ public class ZhaoYun {
         System.out.println("\n\n");
 
         //刘备乐不思蜀，拆开第二个
-        System.out.println("----------------------刘备乐不思蜀，拆开地问个-----------");
+        System.out.println("----------------------刘备乐不思蜀，拆开第二个-----------");
         context = new Context(new GivenGreenLight());
         context.operate(); //拆开第二个锦囊了
         System.out.println("\n\n");
