@@ -196,8 +196,21 @@
             <artifactId>netty-socketio</artifactId>
             <version>1.7.3</version>
         </dependency>
+
+        <dependency>
+            <groupId>cglib</groupId>
+            <artifactId>cglib-nodep</artifactId>
+            <version>3.2.4</version>
+        </dependency>
         <!--/web消息通知-->
 
+        <!--Token验证-->
+        <dependency>
+            <groupId>io.jsonwebtoken</groupId>
+            <artifactId>jjwt</artifactId>
+            <version>0.7.0</version>
+        </dependency>
+        <!--/Token验证-->
     </dependencies>
 
     <build>

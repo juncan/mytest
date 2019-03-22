@@ -415,6 +415,15 @@ public class RedisHelper {
         return result;
     }
 
+    public void generateId(String key) {
+        execute(new JedisActionNoResult() {
+            @Override
+            public void action(Jedis jedis) {
+                System.out.println(jedis.incr(key));
+            }
+        });
+    }
+
 }
 
 

@@ -232,7 +232,8 @@ public class ExportExcelUtil {
                 String fileName = title + DateFormatUtils.format(new Date(), "yyyyMMddHHmmss") + ".xls";
                 String fileName11 = "";
                 String userAgent = request.getHeader("USER-AGENT");
-                if (StringUtils.contains(userAgent, "Firefox") || StringUtils.contains(userAgent, "firefox")) {//火狐浏览器
+                if (StringUtils.contains(userAgent, "Firefox") || StringUtils.contains(userAgent, "firefox")
+                        || StringUtils.contains(userAgent,"Macintosh")) {//火狐浏览器和safari浏览器
                     fileName11 = new String(fileName.getBytes(), "ISO8859-1");
                 } else {
                     fileName11 = URLEncoder.encode(fileName, "UTF-8");//其他浏览器
@@ -243,6 +244,7 @@ public class ExportExcelUtil {
                 response.setHeader("Content-Disposition", headStr);
                 workbook.write(out);
                 out.flush();
+                
                 workbook.close();
             } catch (Exception e) {
                 throw e;

@@ -31,7 +31,15 @@ public class Client {
             }
         }
         operateStream();*/
-        updateFirst();
+        //updateFirst();
+        List<String> list = new ArrayList<String>();
+        list.add("a");
+        list.add("b");
+        list.add("c");
+        list.add("d");
+        list.add("e");
+        list.add(0, "f");
+        System.out.println(list);
 
     }
 

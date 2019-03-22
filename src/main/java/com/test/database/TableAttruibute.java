@@ -45,7 +45,7 @@ public class TableAttruibute {
                     String columnName = data.getColumnName(i);
 
                     //匹配站点ID的字段及其更新语句
-                    if((data.getColumnTypeName(i).equalsIgnoreCase("char") || data.getColumnTypeName(i).equalsIgnoreCase("varchar")) &&!"site_id".equalsIgnoreCase(columnName)){
+                    /*if((data.getColumnTypeName(i).equalsIgnoreCase("char") || data.getColumnTypeName(i).equalsIgnoreCase("varchar")) &&!"site_id".equalsIgnoreCase(columnName)){
                         String searchSql = "select " + columnName + " from " + rs.getString("TABLE_NAME") + " where " + columnName + " = '5abc504de4b006684a899ce700000000'";
                         stmt = con.prepareStatement(searchSql);
                         rstable = stmt.executeQuery(searchSql);
@@ -54,9 +54,9 @@ public class TableAttruibute {
                             //System.out.println("update "+rs.getString("TABLE_NAME")+" set "+columnName+" = '94a87ae8f3b911e8b31300505681279f' where site_id ='94a87ae8f3b911e8b31300505681279f' and "+columnName+" ='5a9ca108e4b0cd28f9c8a0c500000000';");
                             break;
                         }
-                    }
+                    }*/
 
-                    /*if("site_id".equalsIgnoreCase(columnName)){
+                    if("site_id".equalsIgnoreCase(columnName)){
                         //删除不在具体站点下的sql语句
                         //System.out.println("delete from new_dy_activity."+rs.getString("TABLE_NAME")+" where site_id not in('59b6022e0cf282cdb49be9c000000000','5a9ca108e4b0cd28f9c8a0c500000000','5b8759ffe4b0ce15aab7db3200000000');");
                         //更新站点ID
@@ -64,7 +64,7 @@ public class TableAttruibute {
                         //System.out.println("update new_dy_activity."+rs.getString("TABLE_NAME")+" set site_id = '8e087689f3b911e8b31300505681279f' where site_id ='5a9ca108e4b0cd28f9c8a0c500000000';");
                         //System.out.println("update new_dy_activity."+rs.getString("TABLE_NAME")+" set site_id = '94a87ae8f3b911e8b31300505681279f' where site_id ='5b8759ffe4b0ce15aab7db3200000000';");
                         System.out.println("update new_dy_kp."+rs.getString("TABLE_NAME")+" set site_id = '254f682df46511e892625800e349b86a' where site_id ='5a9ca108e4b0cd28f9c8a0c500000000';");
-                    }*/
+                    }
                 }
             }
             rs.close();
