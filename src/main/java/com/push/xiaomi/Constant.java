@@ -6,7 +6,7 @@ import java.util.Map;
 /**
  * @author wujc
  * @ClassName Constant
- * @Description: TODO
+ * @Description: 模板定义
  * @create 2018-11-01 9:39
  */
 public class Constant {

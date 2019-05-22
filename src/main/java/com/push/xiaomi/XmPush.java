@@ -16,7 +16,7 @@ import java.util.Random;
 /**
  * @author wujc
  * @ClassName XmPush
- * @Description: TODO
+ * @Description: 小米推送
  * @create 2018-11-01 10:20
  */
 public class XmPush {

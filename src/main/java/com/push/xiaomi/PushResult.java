@@ -6,7 +6,7 @@ import com.xiaomi.xmpush.server.Result;
 /**
  * @author wujc
  * @ClassName PushResult
- * @Description: TODO
+ * @Description: 推送结果
  * @create 2018-11-01 10:13
  */
 public class PushResult {

@@ -190,6 +190,15 @@
         </dependency>
         <!--/netty-->
 
+        <!--rabbitmq-->
+        <dependency>
+            <groupId>com.rabbitmq</groupId>
+            <artifactId>amqp-client</artifactId>
+            <version>4.2.1</version>
+        </dependency>
+        <!--/rabbitmq-->
+
+
         <!--web消息通知-->
         <dependency>
             <groupId>com.corundumstudio.socketio</groupId>
@@ -218,6 +227,13 @@
             <version>2.3.23</version>
         </dependency>
         <!-- freemarker结束 -->
+
+        <!--二维码-->
+        <dependency>
+            <groupId>com.google.zxing</groupId>
+            <artifactId>core</artifactId>
+            <version>3.3.0</version>
+        </dependency>
     </dependencies>
 
     <build>
