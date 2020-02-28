@@ -1,23 +1,74 @@
 package com;
 
-import com.core.utils.IdCardCheckUtil;
-
+import java.io.*;
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.net.InetAddress;
 import java.net.UnknownHostException;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.stream.Stream;
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.*;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * @author wujc
  * @ClassName Client
- * @Description: TODO
  * @create 2018-10-10 15:53
  */
 public class Client {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws FileNotFoundException {
+
+        Object obj1 = new FileReader(new File("1.dat"));
+        Object obj2 = new InputStreamReader(new File("1.dat"));
+        Object obj3 = new BufferedReader(new FileReader("1.dat"));
+        Object obj4 = new FileInputStream(new File("1.dat"));
+
+        int[] a1 = {3,4,5};
+
+        int[][] a2 = new int[3][3];
+        String a3[] = {"string1","string2","string3"};
+        String a4[] = new String[]{"string4","string5","string6"};
+
+        BigDecimal joinRate = new BigDecimal(3).divide(new BigDecimal(26), 4, RoundingMode.HALF_UP).multiply(new BigDecimal(100));
+        System.out.println(joinRate);
+        /*String a = "sfhsfj";
+        exchange(a);
+        System.out.println("mian a:" + a);*/
+
+        /*BigDecimal ss = new BigDecimal(0.10);
+
+        if (!(ss.compareTo(BigDecimal.ZERO) == 0)) {
+            System.out.println("true");
+        }
+
+        if (ss.equals(0)) {
+            System.out.println("true");
+        }
+
+        Date old = new Timestamp(System.currentTimeMillis()-1);
+        if (old.before(new Date())) {
+            System.out.println("true");
+        }
+
+        if ((23 == 22) && (100 / 0 == 0))
+            System.out.println("运算没有问题。");
+        else
+            System.out.println("没有报错");
+*/
+        /*String title = "哈哈回复后（但是）+（南大厦）";
+        title = title.replace("（", "、");
+        System.out.println(title);
+
+        switch (0) {
+            case 1:
+                break;
+            case 2:
+                break;
+            default:
+
+        }*/
         /*String idCard = "56032119930512811X";
         //System.out.println(IdCardCheckUtil.IDCardValidate(idCard));
         *//*System.out.println(Integer.parseInt("0"));*//*
@@ -33,15 +84,117 @@ public class Client {
         operateStream();*/
         //updateFirst();
 
-        List<String> list = new ArrayList<String>();
+        /*List<String> list = new ArrayList<String>();
         list.add("a");
         list.add("b");
         list.add("c");
         list.add("d");
         list.add("e");
         list.add(0, "f");
-        System.out.println(list);
+        System.out.println(list);*/
+        /*Charset utf8 = Charset.forName("UTF-8");
+        ByteBuf buf = Unpooled.copiedBuffer("Netty in Action rocks!", utf8); //1
 
+        ByteBuf sliced = buf.slice(0, 14);          //2
+        System.out.println(sliced.toString(utf8));  //3
+
+        buf.setByte(0, (byte) 'J');                 //4
+        assert buf.getByte(0) == sliced.getByte(0);*/
+        BigDecimal rate = new BigDecimal(3).divide(new BigDecimal(7),4, RoundingMode.HALF_UP).multiply(new BigDecimal(100));
+        System.out.println(rate.toString());
+        if ((23 == 23) || (100 / 0 == 0))
+            System.out.println("运算没有问题。");
+        else
+            System.out.println("没有报错");
+
+        System.out.println(fibonacci(10));
+
+
+        Date date = strToDate("2019-10-14 00:00:00");
+        System.out.println(date.toString());
+
+        if ("14:51".compareTo("14:50")>0) {
+            System.out.println("能比较");
+        }
+
+        String dateStr = dateToStr(new Date(), "MM月-dd日");
+        System.out.println(dateStr);
+
+        String userAgent = "User-Agent:Mozilla/5.0 (iPhone; CPU iPhone OS 8_0_2 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Version/8.0 Mobile/12A366 Safari/600.1.4".toLowerCase();
+        String regEx = "micromessenger|ipad|iphone|ipod|android|yoya-ios|yoya-android";
+        Pattern pattern = Pattern.compile(regEx);
+        Matcher matcher = pattern.matcher(userAgent);
+        if (matcher.find()) {
+            System.out.println("或时间福建省");
+        }
+
+        char[] c = {'h','e','l','l','o'};
+        reverseString(c);
+    }
+
+    public static String dateToStr(Date date, String pattern) {
+        if (date == null) {
+            return "";
+        }
+        if (pattern == null) {
+            pattern = "yyyy-MM-dd";
+        }
+        String dateString = "";
+        SimpleDateFormat sdf = new SimpleDateFormat(pattern);
+        try {
+            dateString = sdf.format(date);
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+        return dateString;
+    }
+
+
+    public static int reverse(int x) {
+        String s = String.valueOf(x);
+        int n = s.length();
+        StringBuilder res = new StringBuilder();
+        for(int i = n-1;i>=0;i--){
+            if(s.charAt(i) == '-'){
+                res.append(new char[]{s.charAt(i)},0,n);
+            }
+            res.append(s.charAt(i));
+        }
+        return Integer.valueOf(res.toString());
+    }
+
+    public static Date strToDate(String str) {
+        DateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        Date date = null;
+        try {
+            date = df.parse(str);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        return date;
+    }
+
+    private static int fibonacci(int n) {
+        if (n < 0) {
+            return -1;
+        } else if (n == 0) {
+            return 0;
+        } else if (n == 1 || n == 2) {
+            return 1;
+        }else{
+            int c = 0, a = 1, b = 1;
+            for (int i = 3; i <= n; i++) {
+                c = a + b;
+                a = b;
+                b = c;
+            }
+            return c;
+        }
+    }
+
+    private static void exchange(String a) {
+        a = "dsjfkj";
+        System.out.println("exchange a:" + a);
     }
 
     public static String getIP(String name){
@@ -61,6 +214,14 @@ public class Client {
         dlist.add("jsp");
         dlist.add("Ios");
         System.out.println(dlist.stream().distinct().filter((x)->x.equals("jsp")).count());
+    }
+
+    public static void reverseString(char[] s) {
+        for (int i = 0; i < s.length/2; i++) {
+            char temp = s[i];
+            s[i] = s[s.length-1-i];
+            s[s.length-1-i] = temp;
+        }
     }
 
     public static void updateFirst() {

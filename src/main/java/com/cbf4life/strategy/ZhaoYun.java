@@ -1,5 +1,7 @@
 package com.cbf4life.strategy;
 
+import java.io.FileInputStream;
+
 /**
  * @author wujc
  * @ClassName ZhaoYun

@@ -20,6 +20,7 @@ public class Constant {
         Map<Integer, String> map = new HashMap<Integer, String>();
         map.put(1, "CvsvT5RHPzWeWAsv3GNKmQ==");
         map.put(2, "o3R9nqVqp9K41feIbnmg9A==");
+        map.put(3, "niPEmfxEpMBuq2GzcEvToQ=="); //自己的AppSecret
         return map;
     }
 
@@ -27,6 +28,7 @@ public class Constant {
         Map<Integer, String> map = new HashMap<Integer, String>();
         map.put(1, "");
         map.put(2, "");
+        map.put(3, "com.wujc.shop");
         return map;
     }
 }

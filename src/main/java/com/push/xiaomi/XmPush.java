@@ -26,12 +26,12 @@ public class XmPush {
         //正式启动方式
         Constants.useOfficial();
         String app_secret_key = Constant.androidSeretKey().get(app_type);
-        if (StringUtils.isNoneBlank(app_secret_key)) {
+        if (!StringUtils.isNoneBlank(app_secret_key)) {
             logger.info("secret_key空值");
             return new PushResult("500", "secret_key空值");
         }
         String package_name = Constant.packageName().get(app_type);
-        if (StringUtils.isNoneBlank(package_name)) {
+        if (!StringUtils.isNoneBlank(package_name)) {
             logger.info("package_name空值");
             return new PushResult("500", "package_name空值");
         }

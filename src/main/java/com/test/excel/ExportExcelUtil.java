@@ -64,7 +64,7 @@ public class ExportExcelUtil {
      * @date: 2018-12-5 14:38
      * @return:
      */
-    public ExportExcelUtil(String title,HttpServletRequest request, HttpServletResponse response) {
+    public ExportExcelUtil(String title, HttpServletRequest request, HttpServletResponse response) {
         this.title = title;
         this.request = request;
         this.response = response;
