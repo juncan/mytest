@@ -1,76 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6e3d4482-8fb4-4acf-9fa9-6d112765d2b9" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/algorithm/jitu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/concurrency/AtomicStampedReferenceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/concurrency/CountWordTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/concurrency/Fibonacci.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/concurrency/ForkJoinTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/concurrency/FutureTaskTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/concurrency/MR.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/concurrency/RateLimiterTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/core/utils/DiskUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/hutool/Excel/ExportExcel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jdk8/lambda/Client.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jdk8/lambda/Person.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jdk8/lambda/PersonFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jdk8/stampedlock/Client.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jdk8/stream/Bar.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jdk8/stream/Client.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jdk8/stream/Foo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jdk8/stream/Person.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jdk8/supervene/Client.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jdk8/supervene/ConcurrentUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jdk8/supervene/Increment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/push/xiaomi/DemoPush.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/task/BindRegIdTimerTask.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/task/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/task/Task.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/test/FilenameFilterT.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/test/rpc/annotation/Service.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/test/rpc/boot/RpcServerStarter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/test/rpc/core/AbortPolicyWithReport.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/test/rpc/core/MessageCallBack.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/test/rpc/core/MessageSendProxy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/test/rpc/core/NamedThreadFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/test/rpc/core/RpcServerLoader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/test/rpc/core/RpcThreadPool.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/test/rpc/core/client/MessageSendChannelInitializer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/test/rpc/core/client/MessageSendExecutor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/test/rpc/core/client/MessageSendHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/test/rpc/core/client/MessageSendInitializeTask.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/test/rpc/core/server/MessageRecvChannelInitializer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/test/rpc/core/server/MessageRecvExecutor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/test/rpc/core/server/MessageRecvHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/test/rpc/core/server/MessageRecvInitializeTask.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/test/rpc/model/MessageKeyVal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/test/rpc/model/MessageRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/test/rpc/model/MessageResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/test/rpc/proxy/RpcClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/test/rpc/serialize/support/RpcSerializeProtocol.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/test/rpc/servicebean/AddCalculate.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/test/rpc/servicebean/CalcParallelRequestThread.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/test/rpc/servicebean/RpcParallelTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/test/rpc/servicebean/impl/AddCalculateImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/rpc-invoke-config.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/rpc-server.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cbf4life/strategy/ZhaoYun.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cbf4life/strategy/ZhaoYun.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/push/xiaomi/Constant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/push/xiaomi/Constant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/push/xiaomi/XmPush.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/push/xiaomi/XmPush.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/test/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/test/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/test/proxy/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/test/proxy/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/Client.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/cbf4life/strategy/ZhaoYun.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cbf4life/strategy/ZhaoYun.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/push/xiaomi/Constant.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/push/xiaomi/Constant.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/push/xiaomi/XmPush.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/push/xiaomi/XmPush.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/test/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/test/Client.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/test/proxy/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/test/proxy/Client.class" afterDir="false" />
-    </list>
+    <list default="true" id="6e3d4482-8fb4-4acf-9fa9-6d112765d2b9" name="Default" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -497,6 +428,7 @@
       <workItem from="1582705302839" duration="1526000" />
       <workItem from="1582764816161" duration="1329000" />
       <workItem from="1582786195446" duration="699000" />
+      <workItem from="1582967906558" duration="14000" />
     </task>
     <servers />
   </component>
