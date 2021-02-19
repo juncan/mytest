@@ -1,5 +1,20 @@
 package com;
 
+import cn.hutool.core.date.DatePattern;
+import cn.hutool.core.date.DateUtil;
+import cn.hutool.core.map.MapUtil;
+import cn.hutool.crypto.SecureUtil;
+import cn.hutool.http.HttpUtil;
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONObject;
+import com.constant.GuardTypeEnum;
+import com.core.utils.CommonUtils;
+import com.core.utils.CronUtils;
+import com.core.utils.ShareCodeUtil;
+import com.test.constants.FindMoreTypeEnum;
+import org.apache.commons.lang3.CharUtils;
+import org.apache.commons.lang3.StringUtils;
+
 import java.io.*;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
@@ -8,6 +23,7 @@ import java.net.UnknownHostException;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.time.LocalDateTime;
 import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -20,10 +36,30 @@ import java.util.regex.Pattern;
 public class Client {
     public static void main(String[] args) throws FileNotFoundException {
 
-        Object obj1 = new FileReader(new File("1.dat"));
-        Object obj2 = new InputStreamReader(new File("1.dat"));
+        String powerName = "admin,xiaowu";
+        if ("admin".indexOf(powerName) > -1) {
+            System.out.println("true");
+        }
+
+        Double dl = 34.9;
+        Double d2 = 34.9;
+        if (d2.equals(dl)) {
+            System.out.println("ok");
+        }
+
+        System.out.println(System.currentTimeMillis()/1000);
+
+        Date end_time = DateUtil.parse("2020-05-31", "yyyy-MM-dd");
+        Calendar calendar = new GregorianCalendar();
+        calendar.setTime(end_time);
+        calendar.add(Calendar.DATE, 1);
+        end_time = calendar.getTime();
+        System.out.println(end_time);
+
+
+      /*  Object obj1 = new FileReader(new File("1.dat"));
         Object obj3 = new BufferedReader(new FileReader("1.dat"));
-        Object obj4 = new FileInputStream(new File("1.dat"));
+        Object obj4 = new FileInputStream(new File("1.dat"));*/
 
         int[] a1 = {3,4,5};
 
@@ -33,6 +69,11 @@ public class Client {
 
         BigDecimal joinRate = new BigDecimal(3).divide(new BigDecimal(26), 4, RoundingMode.HALF_UP).multiply(new BigDecimal(100));
         System.out.println(joinRate);
+        System.out.println("md5:"+SecureUtil.md5().toString());
+
+        String str = HttpUtil.get("http://weixin.img.upload.meisuitv.com/ba9afa43fa4b47e08f1924136da15291.zip?qhash/md5");
+        System.out.println(str);
+
         /*String a = "sfhsfj";
         exchange(a);
         System.out.println("mian a:" + a);*/
@@ -130,6 +171,122 @@ public class Client {
 
         char[] c = {'h','e','l','l','o'};
         reverseString(c);
+
+
+        Date futureDate = addDate(10);
+        long ts = (futureDate.getTime() - System.currentTimeMillis()) / 1000;
+        System.out.println(ts);
+
+        System.out.println(CronUtils.getCron(new Date()));
+
+        String is_anchor = "0";
+        if (StringUtils.isBlank(is_anchor) || !is_anchor.equals("1")) {
+            System.out.println("fsfkjs");
+        }
+
+        int num = 0;
+        try {
+            for (int i = 0; i < 200; i++) {
+                if (i == 1) {
+                    int ss = i / 0;
+                }
+                num++;
+            }
+        } catch (Exception e) {
+
+        }
+        System.out.println(num);
+
+        if (true && !false) {
+            System.out.println("test");
+        }
+
+        System.out.println(CommonUtils.mobileEncrypt("18350211269"));
+
+        System.out.println("20.20".compareTo("20.1"));
+
+        StringBuilder stringBuilder = new StringBuilder();
+        stringBuilder.append("fsaf:2121,sdasdd:2121,");
+        String value = stringBuilder.toString().substring(0, stringBuilder.length() - 1);
+        System.out.println(value);
+        System.out.println("邀请码："+ShareCodeUtil.idToCode("1"));
+
+        System.out.println("2123".indexOf("1"));
+
+        if(true && false){
+            System.out.println("true");
+        }
+
+        System.out.println(GuardTypeEnum.valueOf("MONTHLY").getCode());
+
+        BigDecimal a =new BigDecimal(0.1);
+
+        System.out.println(Integer.MAX_VALUE);
+
+        //System.out.println(LocalDateTime.parse(DateUtil.format(new Date(), DatePattern.NORM_DATE_PATTERN)+" 00:00:00"));
+
+        System.out.println(DateUtil.beginOfWeek(new Date()));
+
+        System.out.println(DateUtil.endOfWeek(new Date()));
+
+        System.out.println(DateUtil.betweenDay(new Date(),DateUtil.offsetDay(new Date(),1),true));
+        //System.out.println(FindMoreTypeEnum.valueOf("超值好货").getCode());
+
+        Map<String, Object> data = new HashMap<>();
+        data.put("startTime", new Date());
+        Date startTime = MapUtil.getDate(data, "startTime");
+        System.out.println(startTime);
+        try {
+            for (int i = 0; i < 100; i++) {
+                if (i == 50) {
+                    i = i / 0;
+                }
+                System.out.println(i);
+            }
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+
+
+        String str11 = "{\n" +
+                "  \"CallbackCommand\": \"C2C.CallbackBeforeSendMsg\", // 回调命令\n" +
+                "  \"From_Account\": \"jared\", // 发送者\n" +
+                "  \"To_Account\": \"Jonh\", // 接收者\n" +
+                "  \"MsgSeq\": 48374, // 消息序列号\n" +
+                "  \"MsgRandom\": 2837546, // 消息随机数\n" +
+                "  \"MsgTime\": 1557481126, // 消息的发送时间戳，单位为秒 \n" +
+                "  \"MsgKey\": \"48374_2837546_1557481126\", //消息的唯一标识，可用于 REST API 撤回单聊消息\n" +
+                "  \"MsgBody\": [ // 消息体，参见 TIMMessage 消息对象\n" +
+                "      {\n" +
+                "          \"MsgType\": \"TIMTextElem\", // 文本\n" +
+                "          \"MsgContent\": {\n" +
+                "              \"Text\": \"red packet\"\n" +
+                "          }\n" +
+                "      }\n" +
+                "  ]\n" +
+                "}";
+        JSONObject body = JSON.parseObject(str11);
+        System.out.println(body.getJSONArray("MsgContent").toJSONString());
+
+
+    }
+
+    private static Date addDate(int days) {
+        Date date =null;
+        try {
+            Date d = new Date();
+            SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+            Calendar ca = Calendar.getInstance();
+            ca.add(Calendar.DATE, days);// num为增加的天数，可以改变的
+            d = ca.getTime();
+            String enddate = format.format(d);
+            date = format.parse(enddate);
+
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+//
+        return date;
     }
 
     public static String dateToStr(Date date, String pattern) {

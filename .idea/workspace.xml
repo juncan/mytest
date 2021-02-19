@@ -1,11 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6e3d4482-8fb4-4acf-9fa9-6d112765d2b9" name="Default" comment="" />
+    <list default="true" id="6e3d4482-8fb4-4acf-9fa9-6d112765d2b9" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/constant/GuardTypeEnum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/core/utils/CommonUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/core/utils/CronUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/core/utils/ShareCodeUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/test/constants/FindMoreTypeEnum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/test/util/ClientVersionUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jdk8/supervene/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jdk8/supervene/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/push/xiaomi/DemoPush.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/push/xiaomi/DemoPush.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/push/xiaomi/PushResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/push/xiaomi/PushResult.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/push/xiaomi/XmPush.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/push/xiaomi/XmPush.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/test/excel/ExcelExportKit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/test/excel/ExcelExportKit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/test/excel/ExcelExportSimpleKit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/test/excel/ExcelExportSimpleKit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/Client.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jdk8/supervene/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jdk8/supervene/Client.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jdk8/supervene/ConcurrentUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jdk8/supervene/ConcurrentUtils.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jdk8/supervene/Increment.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jdk8/supervene/Increment.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/push/xiaomi/DemoPush.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/push/xiaomi/PushResult.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/push/xiaomi/XmPush.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/test/database/TableAttruibute.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/test/database/TableAttruibute.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/test/excel/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/test/excel/Client.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/test/excel/ExportExcelUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/test/excel/ExportExcelUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/test/netty/EchoClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/test/netty/EchoClient.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/test/netty/EchoServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/test/netty/EchoServer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/test/rabbitmq/RPCServer$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/test/rabbitmq/RPCServer$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/test/redis/RedisHelper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/test/redis/RedisHelper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/test/redis/message/SubThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/test/redis/message/SubThread.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/test/rpc/core/MessageCallBack.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/test/rpc/core/MessageCallBack.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/test/rpc/core/RpcServerLoader.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/test/rpc/core/RpcServerLoader.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/test/rpc/core/server/MessageRecvExecutor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/test/rpc/core/server/MessageRecvExecutor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/test/weixin/util/WX_TemplateMsgUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/test/weixin/util/WX_TemplateMsgUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/test/word/ExportWordUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/test/word/ExportWordUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/test/word/ZipUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/test/word/ZipUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/test/zookeeper/ConnectionWatcher.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/test/zookeeper/ConnectionWatcher.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -18,42 +70,16 @@
       </list>
     </option>
   </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>\/\*for \(Map\.Entry\&lt;Character\, Integer\&gt; entry \: hm\.entrySet\(\)\) \{\n            if\(entry\.getValue\(\)\!\=1\)\{\n                repeat \+\= entry\.getValue\(\)\;\n            \}\n\n        \}\*\/</find>
-      <find>uriConfigFile</find>
-      <find>configFile</find>
-      <find>RedisSection</find>
-      <find>serialVersionUID</find>
-      <find>QueryService.config</find>
-      <find>poi</find>
-      <find>readSections</find>
-      <find>useMemcached</find>
-      <find>MemcachedConnection</find>
-      <find>MemcachedSection</find>
-      <find>MemcachedConnectionList</find>
-      <find>getInstance</find>
-      <find>redis.clients</find>
-      <find>netty-all</find>
-      <find>&quot;com.cbf4life</find>
-      <find>家长签名</find>
-      <find>计</find>
-      <find>忘记密码</find>
-      <find>put</find>
-      <find>aliyuncs</find>
-      <find>profile</find>
-      <find>ProxyClassFactory</find>
-      <find>RpcServerLoader</find>
-      <find>newlandframework.netty.rpc.core</find>
-      <find>RPC Server Send</find>
-      <find>calc add result</find>
-    </findStrings>
-    <replaceStrings>
-      <replace>com.test.rpc.core</replace>
-    </replaceStrings>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="D:/software/maven/apache-maven-3.5.4" />
+        <option name="userSettingsFile" value="D:\software\maven\apache-maven-3.5.4\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
   </component>
   <component name="ProjectId" id="1Xhcu1lTo9cxSPpNS8mIWcTuAoF" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -67,27 +93,31 @@
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://E:/工作材料/java学习/mytest/src/main/java/com/Client.java" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\工作材料\java学习\mytest\src\main\resources" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.test.util" />
+      <recent name="com.test.constants" />
+      <recent name="com.constant" />
+      <recent name="com.core.utils" />
+      <recent name="com.task" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\工作材料\java学习\mytest\src\main\resources" />
       <recent name="E:\工作材料\java学习\mytest\src\main\resources\template" />
       <recent name="E:\工作材料\java学习\mytest\src\main\java\com\test\word" />
       <recent name="E:\工作材料\java学习\mytest\src" />
       <recent name="E:\工作材料\java学习\mytest\src\main\java\com\test\authenticator" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.task" />
-      <recent name="com.push.xiaomi" />
-      <recent name="com.test.word" />
-      <recent name="com.test.authenticator" />
-      <recent name="com.cbf4life.abstractfactory" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\工作材料\java学习\mytest\src\main\resources" />
     </key>
   </component>
   <component name="RestServicesNavigator">
@@ -97,6 +127,20 @@
     </treeState>
   </component>
   <component name="RunManager" selected="Application.Client">
+    <configuration name="Client (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.jdk8.supervene.Client" />
+      <module name="mytest" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.jdk8.supervene.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Client" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.Client" />
       <module name="mytest" />
@@ -104,6 +148,20 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ClientVersionUtil" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.test.util.ClientVersionUtil" />
+      <module name="mytest" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.test.util.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -122,20 +180,6 @@
         </pattern>
       </extension>
     </configuration>
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.task.Main" />
-      <module name="mytest" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.task.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="RpcParallelTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.test.rpc.servicebean.RpcParallelTest" />
       <module name="mytest" />
@@ -143,20 +187,6 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.test.rpc.servicebean.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="RpcServerStarter" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.test.rpc.boot.RpcServerStarter" />
-      <module name="mytest" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.test.rpc.boot.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -202,18 +232,18 @@
     </configuration>
     <list>
       <item itemvalue="Application.Client" />
-      <item itemvalue="Application.Main" />
-      <item itemvalue="Application.RpcServerStarter" />
       <item itemvalue="Application.RpcParallelTest" />
       <item itemvalue="Application.jitu" />
+      <item itemvalue="Application.Client (1)" />
+      <item itemvalue="Application.ClientVersionUtil" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Client" />
+        <item itemvalue="Application.ClientVersionUtil" />
+        <item itemvalue="Application.Client (1)" />
         <item itemvalue="Application.jitu" />
         <item itemvalue="Application.RpcParallelTest" />
-        <item itemvalue="Application.RpcServerStarter" />
-        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -429,6 +459,43 @@
       <workItem from="1582764816161" duration="1329000" />
       <workItem from="1582786195446" duration="699000" />
       <workItem from="1582967906558" duration="14000" />
+      <workItem from="1585201418646" duration="732000" />
+      <workItem from="1586340807186" duration="2199000" />
+      <workItem from="1586395040597" duration="1416000" />
+      <workItem from="1588149274072" duration="805000" />
+      <workItem from="1590385978064" duration="439000" />
+      <workItem from="1590487226904" duration="540000" />
+      <workItem from="1591167046994" duration="758000" />
+      <workItem from="1591321994535" duration="1383000" />
+      <workItem from="1591690700848" duration="1297000" />
+      <workItem from="1592387407304" duration="686000" />
+      <workItem from="1593325512839" duration="848000" />
+      <workItem from="1594083997892" duration="984000" />
+      <workItem from="1595496590253" duration="52000" />
+      <workItem from="1595835777225" duration="653000" />
+      <workItem from="1595855684652" duration="677000" />
+      <workItem from="1596692188184" duration="1330000" />
+      <workItem from="1596771041119" duration="190000" />
+      <workItem from="1597056458721" duration="747000" />
+      <workItem from="1597136078914" duration="634000" />
+      <workItem from="1599708021882" duration="2225000" />
+      <workItem from="1599718426982" duration="2235000" />
+      <workItem from="1601207967207" duration="1213000" />
+      <workItem from="1601286660511" duration="658000" />
+      <workItem from="1601349828090" duration="901000" />
+      <workItem from="1602205561502" duration="152000" />
+      <workItem from="1602467549265" duration="2718000" />
+      <workItem from="1603098723800" duration="1132000" />
+      <workItem from="1603435576860" duration="688000" />
+      <workItem from="1603762999700" duration="722000" />
+      <workItem from="1604398901941" duration="5328000" />
+      <workItem from="1605505525880" duration="9488000" />
+      <workItem from="1607307309244" duration="2973000" />
+      <workItem from="1608688951002" duration="1339000" />
+      <workItem from="1609729274383" duration="1487000" />
+      <workItem from="1610413648669" duration="1231000" />
+      <workItem from="1610444483640" duration="1197000" />
+      <workItem from="1612763455579" duration="1217000" />
     </task>
     <servers />
   </component>
@@ -445,38 +512,46 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1493" height="266" key="GridCell.Tab.0.bottom" timestamp="1582725358818">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="569" y="527" width="916" height="499" key="#xdebugger.evaluate" timestamp="1612764074370">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1493" height="266" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1582725358818" />
-    <state width="1493" height="266" key="GridCell.Tab.0.center" timestamp="1582725358818">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="569" y="527" width="916" height="499" key="#xdebugger.evaluate/0.0.1920.1040@0.0.1920.1040" timestamp="1612764074370" />
+    <state width="414" height="646" key="DebuggerActiveHint" timestamp="1612763587984">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1493" height="266" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1582725358818" />
-    <state width="1493" height="266" key="GridCell.Tab.0.left" timestamp="1582725358818">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="414" height="646" key="DebuggerActiveHint/0.0.1920.1040@0.0.1920.1040" timestamp="1612763587984" />
+    <state width="1876" height="316" key="GridCell.Tab.0.bottom" timestamp="1612788043531">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1493" height="266" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1582725358818" />
-    <state width="1493" height="266" key="GridCell.Tab.0.right" timestamp="1582725358818">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="1876" height="316" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1612788043531" />
+    <state width="1876" height="316" key="GridCell.Tab.0.center" timestamp="1612788043531">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1493" height="266" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1582725358818" />
-    <state width="1493" height="266" key="GridCell.Tab.1.bottom" timestamp="1582725358818">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="1876" height="316" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1612788043531" />
+    <state width="1876" height="316" key="GridCell.Tab.0.left" timestamp="1612788043531">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1493" height="266" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1582725358818" />
-    <state width="1493" height="266" key="GridCell.Tab.1.center" timestamp="1582725358818">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="1876" height="316" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1612788043531" />
+    <state width="1876" height="316" key="GridCell.Tab.0.right" timestamp="1612788043531">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1493" height="266" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1582725358818" />
-    <state width="1493" height="266" key="GridCell.Tab.1.left" timestamp="1582725358818">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="1876" height="316" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1612788043531" />
+    <state width="1876" height="316" key="GridCell.Tab.1.bottom" timestamp="1612788043531">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1493" height="266" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1582725358818" />
-    <state width="1493" height="266" key="GridCell.Tab.1.right" timestamp="1582725358818">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="1876" height="316" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1612788043531" />
+    <state width="1876" height="316" key="GridCell.Tab.1.center" timestamp="1612788043531">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1493" height="266" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1582725358818" />
+    <state width="1876" height="316" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1612788043531" />
+    <state width="1876" height="316" key="GridCell.Tab.1.left" timestamp="1612788043531">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1876" height="316" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1612788043531" />
+    <state width="1876" height="316" key="GridCell.Tab.1.right" timestamp="1612788043531">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1876" height="316" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1612788043531" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -647,9 +722,24 @@
           <option name="timeStamp" value="175" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/cn/hutool/hutool-all/4.6.1/hutool-all-4.6.1-sources.jar!/cn/hutool/http/HttpRequest.java</url>
+          <line>869</line>
+          <option name="timeStamp" value="186" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/cn/hutool/hutool-all/4.6.1/hutool-all-4.6.1-sources.jar!/cn/hutool/http/HttpRequest.java</url>
+          <line>1143</line>
+          <option name="timeStamp" value="187" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/test/util/ClientVersionUtil.java</url>
+          <line>17</line>
+          <option name="timeStamp" value="188" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/Client.java</url>
-          <line>131</line>
-          <option name="timeStamp" value="177" />
+          <line>267</line>
+          <option name="timeStamp" value="189" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -668,113 +758,5 @@
         <watch expression="(23 == 23)" />
       </configuration>
     </watches-manager>
-  </component>
-  <component name="debuggerHistoryManager">
-    <expressions id="watch">
-      <expression>
-        <expression-string>ByteBufUtil.hexDump(buf)</expression-string>
-        <language-id>JAVA</language-id>
-        <custom-info>io.netty.buffer.ByteBufUtil</custom-info>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>(char)buf.getByte(0)</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>(char)buf.getByte(1)</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>(char)sliced.getByte(1)</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>(char)sliced.getByte(2)</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>(char)sliced.getBytes(0)</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>(char)sliced.getBytes(2)</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>(char)sliced.readByte()</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>(char)sliced</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>(char)buf</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-    </expressions>
-    <expressions id="evaluateExpression">
-      <expression>
-        <expression-string>string.substring(0, 1)</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>&quot;14:49&quot;.compareTo(&quot;14:50&quot;)</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>&quot;14:50&quot;.compareTo(&quot;14:50&quot;)</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>&quot;14:51&quot;.compareTo(&quot;14:50&quot;)</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>&quot;14:53&quot;.compareTo(&quot;14:50&quot;)</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>&quot;14:52&quot;.compareTo(&quot;14:50&quot;)</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>&quot;14:50&quot;.compareTo(&quot;14:51&quot;)</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-    </expressions>
-  </component>
-  <component name="masterDetails">
-    <states>
-      <state key="ProjectJDKs.UI">
-        <settings>
-          <last-edited>1.8</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-    </states>
   </component>
 </project>

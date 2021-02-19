@@ -1,3 +1,4 @@
+/*
 package com.push.xiaomi;
 
 import com.xiaomi.xmpush.server.Constants;
@@ -13,12 +14,14 @@ import java.io.IOException;
 import java.util.List;
 import java.util.Random;
 
+*/
 /**
  * @author wujc
  * @ClassName XmPush
  * @Description: 小米推送
  * @create 2018-11-01 10:20
- */
+ *//*
+
 public class XmPush {
     private static final Logger logger = LoggerFactory.getLogger(XmPush.class);
 
@@ -103,3 +106,4 @@ public class XmPush {
     }
 
 }
+*/

@@ -1,7 +1,9 @@
 package com.jdk8.supervene;
 
 import javafx.scene.paint.Stop;
+import org.apache.commons.lang3.StringUtils;
 
+import java.math.BigDecimal;
 import java.util.concurrent.*;
 import java.util.stream.IntStream;
 
@@ -74,5 +76,40 @@ public class Client {
 
         System.out.println(increment.count);
 
+
+        BigDecimal os = new BigDecimal("0.10");
+        BigDecimal os1 = new BigDecimal("0.1");
+        System.out.println(os.compareTo(os1));
+
+
+        String title = "会撩人的小姐姐尽在美岁直播！";
+        title = title.replace("美岁", "嗨兔");
+        System.out.println(title);
+
+        Double d1 = 0.01;
+        Double d2 = 0.09;
+        Double d3 = 0.10;
+
+        System.out.println(d3.equals(add(d1 , d2)));
+
+        String num = null;
+        if (!StringUtils.isBlank(num) && Integer.parseInt(num) >= 10) {
+            System.out.println("true");
+        }
+
+        System.out.println(new BigDecimal(String.valueOf(0.069)).setScale(2, BigDecimal.ROUND_DOWN).doubleValue());
+    }
+
+    /**
+     * * 两个Double数相加 *
+     *
+     * @param v1 *
+     * @param v2 *
+     * @return Double
+     */
+    public static Double add(Double v1, Double v2) {
+        BigDecimal b1 = new BigDecimal(v1.toString());
+        BigDecimal b2 = new BigDecimal(v2.toString());
+        return new Double(b1.add(b2).doubleValue());
     }
 }

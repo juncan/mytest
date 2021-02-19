@@ -1,3 +1,4 @@
+/*
 package com.test.excel;
 
 
@@ -23,12 +24,14 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
+*/
 /**
  * excel帮助类 （自定义扩展属性）
  * 
  * @author xiezq
  *
- */
+ *//*
+
 public class ExcelExportKit implements IExcelExport{
 
 	private static final String VERSION_2003 = "2003";
@@ -176,7 +179,8 @@ public class ExcelExportKit implements IExcelExport{
 		return wb;
 	}
 	
-	/**
+	*/
+/**
      * 添加数据有效性检查.
      * @param sheet 要添加此检查的Sheet
      * @param firstRow 开始行
@@ -185,7 +189,8 @@ public class ExcelExportKit implements IExcelExport{
      * @param lastCol 结束列
      * @param explicitListValues 有效性检查的下拉列表
      * @throws IllegalArgumentException 如果传入的行或者列小于0(< 0)或者结束行/列比开始行/列小
-     */
+     *//*
+
     private void setValidationData(Sheet sheet, int firstRow,  int lastRow,
             int firstCol,  int lastCol,String[] explicitListValues) throws IllegalArgumentException{
         if (firstRow < 0 || lastRow < 0 || firstCol < 0 || lastCol < 0 || lastRow < firstRow || lastCol < firstCol) {
@@ -298,9 +303,11 @@ public class ExcelExportKit implements IExcelExport{
 		this.cellWidth = cellWidth;
 	}
 	
-	/**
+	*/
+/**
 	 * 设置下拉有效数据对象
-	 */
+	 *//*
+
 	class Select{
 	    private int sheetIndex;
 	    private String[] data;
@@ -322,9 +329,11 @@ public class ExcelExportKit implements IExcelExport{
 	    }
 	}
 
-	/**
+	*/
+/**
 	 * 合并单元格对象
-	 */
+	 *//*
+
 	class CellRange{
 		private int sheetIndex;
 		private int[] regions;
@@ -450,4 +459,4 @@ public class ExcelExportKit implements IExcelExport{
 		;
 	}
 
-}
+}*/

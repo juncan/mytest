@@ -1,14 +1,17 @@
+/*
 package com.push.xiaomi;
 
 import java.util.ArrayList;
 import java.util.List;
 
+*/
 /**
  * @author wujc
  * @ClassName DemoPush
  * @Description: 发送Demo
  * @create 2019-05-22
- */
+ *//*
+
 public class DemoPush {
     public static void main(String[] args) {
         //绑定
@@ -23,3 +26,4 @@ public class DemoPush {
         }
     }
 }
+*/
