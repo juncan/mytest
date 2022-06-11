@@ -33,10 +33,5 @@ public class Client {
         for (IWomen women : arrayList) {
             father.HandleMessage(women);
         }
-        String str = "00000000010000000002";
-        String[] strIds = str.split("");
-        for (String id : strIds) {
-            System.out.println(id);
-        }
     }
 }

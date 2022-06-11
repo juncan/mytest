@@ -1,19 +1,32 @@
 package com;
 
 import cn.hutool.core.date.DatePattern;
+import cn.hutool.core.date.DateUnit;
 import cn.hutool.core.date.DateUtil;
+import cn.hutool.core.date.LocalDateTimeUtil;
 import cn.hutool.core.map.MapUtil;
+import cn.hutool.core.util.EnumUtil;
+import cn.hutool.core.util.IdUtil;
+import cn.hutool.core.util.StrUtil;
 import cn.hutool.crypto.SecureUtil;
+import cn.hutool.crypto.asymmetric.SignAlgorithm;
+import cn.hutool.crypto.symmetric.AES;
+import cn.hutool.crypto.symmetric.SymmetricAlgorithm;
+import cn.hutool.http.HttpResponse;
 import cn.hutool.http.HttpUtil;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import com.constant.GuardTypeEnum;
 import com.core.utils.CommonUtils;
 import com.core.utils.CronUtils;
+import com.core.utils.CurrencyUtil;
 import com.core.utils.ShareCodeUtil;
+import com.enums.PayTagsEnum;
+import com.google.common.base.Joiner;
 import com.test.constants.FindMoreTypeEnum;
 import org.apache.commons.lang3.CharUtils;
 import org.apache.commons.lang3.StringUtils;
+import org.apache.commons.lang3.time.DateUtils;
 
 import java.io.*;
 import java.math.BigDecimal;
@@ -23,7 +36,12 @@ import java.net.UnknownHostException;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.time.Duration;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
+import java.time.temporal.TemporalAdjusters;
 import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -47,7 +65,7 @@ public class Client {
             System.out.println("ok");
         }
 
-        System.out.println(System.currentTimeMillis()/1000);
+        System.out.println(System.currentTimeMillis() / 1000);
 
         Date end_time = DateUtil.parse("2020-05-31", "yyyy-MM-dd");
         Calendar calendar = new GregorianCalendar();
@@ -61,17 +79,19 @@ public class Client {
         Object obj3 = new BufferedReader(new FileReader("1.dat"));
         Object obj4 = new FileInputStream(new File("1.dat"));*/
 
-        int[] a1 = {3,4,5};
+        int[] a1 = {3, 4, 5};
 
         int[][] a2 = new int[3][3];
-        String a3[] = {"string1","string2","string3"};
-        String a4[] = new String[]{"string4","string5","string6"};
+        String a3[] = {"string1", "string2", "string3"};
+        String a4[] = new String[]{"string4", "string5", "string6"};
 
-        BigDecimal joinRate = new BigDecimal(3).divide(new BigDecimal(26), 4, RoundingMode.HALF_UP).multiply(new BigDecimal(100));
+        BigDecimal joinRate =
+                new BigDecimal(3).divide(new BigDecimal(26), 4, RoundingMode.HALF_UP).multiply(new BigDecimal(100));
         System.out.println(joinRate);
-        System.out.println("md5:"+SecureUtil.md5().toString());
+        System.out.println("md5:" + SecureUtil.md5().toString());
 
-        String str = HttpUtil.get("http://weixin.img.upload.meisuitv.com/ba9afa43fa4b47e08f1924136da15291.zip?qhash/md5");
+        String str = HttpUtil.get("http://weixin.img.upload.meisuitv.com/ba9afa43fa4b47e08f1924136da15291" +
+                ".zip?qhash/md5");
         System.out.println(str);
 
         /*String a = "sfhsfj";
@@ -141,7 +161,8 @@ public class Client {
 
         buf.setByte(0, (byte) 'J');                 //4
         assert buf.getByte(0) == sliced.getByte(0);*/
-        BigDecimal rate = new BigDecimal(3).divide(new BigDecimal(7),4, RoundingMode.HALF_UP).multiply(new BigDecimal(100));
+        BigDecimal rate =
+                new BigDecimal(3).divide(new BigDecimal(7), 4, RoundingMode.HALF_UP).multiply(new BigDecimal(100));
         System.out.println(rate.toString());
         if ((23 == 23) || (100 / 0 == 0))
             System.out.println("运算没有问题。");
@@ -154,14 +175,15 @@ public class Client {
         Date date = strToDate("2019-10-14 00:00:00");
         System.out.println(date.toString());
 
-        if ("14:51".compareTo("14:50")>0) {
+        if ("14:51".compareTo("14:50") > 0) {
             System.out.println("能比较");
         }
 
         String dateStr = dateToStr(new Date(), "MM月-dd日");
         System.out.println(dateStr);
 
-        String userAgent = "User-Agent:Mozilla/5.0 (iPhone; CPU iPhone OS 8_0_2 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Version/8.0 Mobile/12A366 Safari/600.1.4".toLowerCase();
+        String userAgent = ("User-Agent:Mozilla/5.0 (iPhone; CPU iPhone OS 8_0_2 like Mac OS X) AppleWebKit/600.1.4 " +
+                "(KHTML, like Gecko) Version/8.0 Mobile/12A366 Safari/600.1.4").toLowerCase();
         String regEx = "micromessenger|ipad|iphone|ipod|android|yoya-ios|yoya-android";
         Pattern pattern = Pattern.compile(regEx);
         Matcher matcher = pattern.matcher(userAgent);
@@ -169,7 +191,7 @@ public class Client {
             System.out.println("或时间福建省");
         }
 
-        char[] c = {'h','e','l','l','o'};
+        char[] c = {'h', 'e', 'l', 'l', 'o'};
         reverseString(c);
 
 
@@ -209,27 +231,28 @@ public class Client {
         stringBuilder.append("fsaf:2121,sdasdd:2121,");
         String value = stringBuilder.toString().substring(0, stringBuilder.length() - 1);
         System.out.println(value);
-        System.out.println("邀请码："+ShareCodeUtil.idToCode("1"));
+        System.out.println("邀请码：" + ShareCodeUtil.idToCode("1"));
 
         System.out.println("2123".indexOf("1"));
 
-        if(true && false){
+        if (true && false) {
             System.out.println("true");
         }
 
         System.out.println(GuardTypeEnum.valueOf("MONTHLY").getCode());
 
-        BigDecimal a =new BigDecimal(0.1);
+        BigDecimal a = new BigDecimal(0.1);
 
         System.out.println(Integer.MAX_VALUE);
 
-        //System.out.println(LocalDateTime.parse(DateUtil.format(new Date(), DatePattern.NORM_DATE_PATTERN)+" 00:00:00"));
+        //System.out.println(LocalDateTime.parse(DateUtil.format(new Date(), DatePattern.NORM_DATE_PATTERN)+"
+        // 00:00:00"));
 
         System.out.println(DateUtil.beginOfWeek(new Date()));
 
         System.out.println(DateUtil.endOfWeek(new Date()));
 
-        System.out.println(DateUtil.betweenDay(new Date(),DateUtil.offsetDay(new Date(),1),true));
+        System.out.println(DateUtil.betweenDay(new Date(), DateUtil.offsetDay(new Date(), 1), true));
         //System.out.println(FindMoreTypeEnum.valueOf("超值好货").getCode());
 
         Map<String, Object> data = new HashMap<>();
@@ -265,14 +288,86 @@ public class Client {
                 "      }\n" +
                 "  ]\n" +
                 "}";
-        JSONObject body = JSON.parseObject(str11);
-        System.out.println(body.getJSONArray("MsgContent").toJSONString());
+       /* JSONObject body = JSON.parseObject(str11);
+        System.out.println(body.getJSONArray("MsgContent").toJSONString());*/
 
 
+        Duration duration = LocalDateTimeUtil.between(LocalDateTime.now(), LocalDateTime.now().plusHours(-1));
+        System.out.printf(duration.toMillis() + "");
+
+
+        String ftUrl = Joiner.on("").join("FT_CORPID=", 11, "&FT_TILEID=",
+                11,
+                "&FT_SCENARIO=", 22, "&FT_ORDERNO=", 222,
+                "&CUSTOMERID=", 423, "&USERID=", 555, "&PASSWORD=",
+                88,
+                "&TXCODE=", "5WX004", "&LANGUAGE=CN&CCB_IBSVersion=V6&PT_STYLE=F&resType=jsp",
+                "&MONEY=", 434, "&Enqr_StDt=", 997, "&Enqr_CODt=",
+                3434, "&ORDER=", 8878);
+
+        StringBuilder sb = new StringBuilder(ftUrl);
+        if (StrUtil.isNotBlank("wq23q")) {
+            sb.append("&MsgRp_Jrnl_No=").append("323");
+        }
+
+        BigDecimal result = BigDecimal.valueOf(12L);
+
+        System.out.println(result.add(result.negate()));
+
+        PayTagsEnum payTagsEnum = EnumUtil.fromString(PayTagsEnum.class, "ewqwe", null);
+
+
+        LocalTime localTime = LocalTime.parse("20:13");
+
+        System.out.println(LocalTime.now());
+
+        String content = "test中文";
+
+        //随机生成密钥
+        byte[] key = SecureUtil.generateKey(SymmetricAlgorithm.AES.getValue()).getEncoded();
+
+        //构建
+        AES aes = SecureUtil.aes(key);
+
+        //加密
+        byte[] encrypt = aes.encrypt(content);
+         //解密
+        byte[] decrypt = aes.decrypt(encrypt);
+
+        long between = DateUtil.between(DateUtil.date(), DateUtil.endOfDay(new Date())
+                , DateUnit.SECOND);
+        System.out.println(between);
+
+        System.out.println(IdUtil.simpleUUID());
+
+        System.out.println(DateUtil.format(DateUtil.yesterday(),DatePattern.PURE_DATE_PATTERN));
+
+        LocalDateTime.now().plusMonths(1).with(TemporalAdjusters.firstDayOfMonth()).plusDays(1);
+
+        System.out.println(LocalDateTime.now().getDayOfMonth() );
+
+
+        System.out.println(CurrencyUtil.mul(new BigDecimal("0.01"), new BigDecimal("0.09")));
+
+        Map<String, Object> paramMap = new HashMap<>();
+        paramMap.put("CCB_IBSVersion", "V6");
+        paramMap.put("MERCHANTID", 1);
+        paramMap.put("POSID", 1);
+        paramMap.put("BRANCHID", 1);
+        paramMap.put("ORDERID", 11);
+        paramMap.put("PAYMENT",1);
+        paramMap.put("CURCODE", "01");
+        paramMap.put("TXCODE", "HT0000");
+        String mac = SecureUtil.hmacMd5(
+                "30819d300d06092a864886f70d01010150003818b00308187028181009c355967993e99186e6df9b80d75d9b397f8b428e7af0e0eddc13a35 12bbfb3f743dfb62c52f8f391bb760ce2a3f8d6c39bc56c30bd0781bb4a7aa9d95440a3a3786a65a53ec604f859b75153f73471d58a15cc391049cb406928fc9f698e986735d7580d550ab3648f767c5be813aaa0ab01b8cf020111\n").digestHex(HttpUtil.toParams(paramMap));
+        System.out.println("http://128.196.119.53:8101/CCBIS/ccbMain_XM"+HttpUtil.toParams(paramMap));
+        HttpResponse response = HttpUtil.createPost("http://128.196.119.53:8101/CCBIS/ccbMain_XM"+HttpUtil.toParams(paramMap)).execute();
+
+        System.out.println(response.toString());
     }
 
     private static Date addDate(int days) {
-        Date date =null;
+        Date date = null;
         try {
             Date d = new Date();
             SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
@@ -311,9 +406,9 @@ public class Client {
         String s = String.valueOf(x);
         int n = s.length();
         StringBuilder res = new StringBuilder();
-        for(int i = n-1;i>=0;i--){
-            if(s.charAt(i) == '-'){
-                res.append(new char[]{s.charAt(i)},0,n);
+        for (int i = n - 1; i >= 0; i--) {
+            if (s.charAt(i) == '-') {
+                res.append(new char[]{s.charAt(i)}, 0, n);
             }
             res.append(s.charAt(i));
         }
@@ -338,7 +433,7 @@ public class Client {
             return 0;
         } else if (n == 1 || n == 2) {
             return 1;
-        }else{
+        } else {
             int c = 0, a = 1, b = 1;
             for (int i = 3; i <= n; i++) {
                 c = a + b;
@@ -354,7 +449,7 @@ public class Client {
         System.out.println("exchange a:" + a);
     }
 
-    public static String getIP(String name){
+    public static String getIP(String name) {
         InetAddress address = null;
         try {
             address = InetAddress.getByName(name);
@@ -370,19 +465,19 @@ public class Client {
         dlist.add("java");
         dlist.add("jsp");
         dlist.add("Ios");
-        System.out.println(dlist.stream().distinct().filter((x)->x.equals("jsp")).count());
+        System.out.println(dlist.stream().distinct().filter((x) -> x.equals("jsp")).count());
     }
 
     public static void reverseString(char[] s) {
-        for (int i = 0; i < s.length/2; i++) {
+        for (int i = 0; i < s.length / 2; i++) {
             char temp = s[i];
-            s[i] = s[s.length-1-i];
-            s[s.length-1-i] = temp;
+            s[i] = s[s.length - 1 - i];
+            s[s.length - 1 - i] = temp;
         }
     }
 
     public static void updateFirst() {
-        char[] c = new char[] {
+        char[] c = new char[]{
                 '赵', '钱', '孙', '李', '周', '吴', '郑', '王', '冯', '陈', '楮', '卫', '蒋', '沈', '韩', '杨',
                 '朱', '秦', '尤', '许', '何', '吕', '施', '张', '孔', '曹', '严', '华', '金', '魏', '陶', '姜',
                 '戚', '谢', '邹', '喻', '柏', '水', '窦', '章', '云', '苏', '潘', '葛', '奚', '范', '彭', '郎',
@@ -414,9 +509,13 @@ public class Client {
         };
         for (int i = 0; i < c.length; i++) {
             if ((i + 1) != c.length) {
-                System.out.println("update user set user_name=concat('"+c[i]+"',right(user_name,CHAR_LENGTH(user_name)-1)) where user_name like '"+c[i+1]+"%' and site_id = '94a87ae8f3b911e8b31300505681279f';");
-            }else{
-                System.out.println("update user set user_name=concat('"+c[i]+"',right(user_name,CHAR_LENGTH(user_name)-1)) where user_name like '"+c[0]+"%' and site_id = '94a87ae8f3b911e8b31300505681279f';");
+                System.out.println("update user set user_name=concat('" + c[i] + "',right(user_name,CHAR_LENGTH" +
+                        "(user_name)-1)) where user_name like '" + c[i + 1] + "%' and site_id = " +
+                        "'94a87ae8f3b911e8b31300505681279f';");
+            } else {
+                System.out.println("update user set user_name=concat('" + c[i] + "',right(user_name,CHAR_LENGTH" +
+                        "(user_name)-1)) where user_name like '" + c[0] + "%' and site_id = " +
+                        "'94a87ae8f3b911e8b31300505681279f';");
             }
 
         }
