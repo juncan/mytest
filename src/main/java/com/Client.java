@@ -12,6 +12,7 @@ import cn.hutool.crypto.SecureUtil;
 import cn.hutool.crypto.asymmetric.SignAlgorithm;
 import cn.hutool.crypto.symmetric.AES;
 import cn.hutool.crypto.symmetric.SymmetricAlgorithm;
+import cn.hutool.http.HttpRequest;
 import cn.hutool.http.HttpResponse;
 import cn.hutool.http.HttpUtil;
 import com.alibaba.fastjson.JSON;
@@ -23,7 +24,9 @@ import com.core.utils.CurrencyUtil;
 import com.core.utils.ShareCodeUtil;
 import com.enums.PayTagsEnum;
 import com.google.common.base.Joiner;
+import com.psbc.Signature;
 import com.test.constants.FindMoreTypeEnum;
+import net.rubyeye.xmemcached.KeyProvider;
 import org.apache.commons.lang3.CharUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.time.DateUtils;
@@ -32,7 +35,10 @@ import java.io.*;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.net.InetAddress;
+import java.net.URLEncoder;
 import java.net.UnknownHostException;
+import java.nio.charset.StandardCharsets;
+import java.security.PrivateKey;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -361,9 +367,43 @@ public class Client {
         String mac = SecureUtil.hmacMd5(
                 "30819d300d06092a864886f70d01010150003818b00308187028181009c355967993e99186e6df9b80d75d9b397f8b428e7af0e0eddc13a35 12bbfb3f743dfb62c52f8f391bb760ce2a3f8d6c39bc56c30bd0781bb4a7aa9d95440a3a3786a65a53ec604f859b75153f73471d58a15cc391049cb406928fc9f698e986735d7580d550ab3648f767c5be813aaa0ab01b8cf020111\n").digestHex(HttpUtil.toParams(paramMap));
         System.out.println("http://128.196.119.53:8101/CCBIS/ccbMain_XM"+HttpUtil.toParams(paramMap));
-        HttpResponse response = HttpUtil.createPost("http://128.196.119.53:8101/CCBIS/ccbMain_XM"+HttpUtil.toParams(paramMap)).execute();
+        //HttpResponse response = HttpUtil.createPost("http://128.196.119.53:8101/CCBIS/ccbMain_XM"+HttpUtil.toParams(paramMap)).execute();
 
-        System.out.println(response.toString());
+        //System.out.println(response.toString());
+
+        PSBCPOST();
+    }
+
+    private static void PSBCPOST() {
+        Map<String,Object> paramMap = new HashMap<>();
+        paramMap.put("transName","WPER");
+        String plain;
+        plain ="TranAbbr=WPER"//Y
+                +"|" + "MercDtTm="+ LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyyMMddhhmmss"))//Y
+                +"|" + "TermSsn=213424235423434343" //Y
+                +"|" + "OSttDate="//N
+                +"|" + "OAcqSsn="//N
+                +"|" + "MercCode=1100122410001100110"//Y
+                +"|" + "TermCode="//N
+                +"|" + "TranAmt=0.01"
+                +"|" + "MercUrl=http://35877g80n8.oicp.vip/pay/notify/psbc/callbak/public"
+                +"|" + "Remark1="//N
+                +"|" + "Remark2="//N
+                +"|" + "LimitTime="//N
+                +"|" + "GoodsName="+ Base64.getEncoder().encodeToString("圈享生活".getBytes(StandardCharsets.UTF_8))//Y
+                +"|" + "MercUrl2="//+ URLEncoder.encode(payCommonProperties.getPSBCH5PayConfig().getReturnUrl())//Y
+                +"|" + "SupportPayType="//+ "A"//Y
+                +"|" + "CustPhNo="//+ cache.getPhone()//Y
+        ;
+        System.out.println(plain);
+        paramMap.put("Plain",plain);
+        paramMap.put("Signature","dsadsdsadsa");
+        //链式构建请求
+        String result2 = HttpRequest.post("http://220.248.253.172:8443/psbcpay/main")
+                .form(paramMap)//表单内容
+                .timeout(20000)//超时，毫秒
+                .execute().body();
+        System.out.println(result2);
     }
 
     private static Date addDate(int days) {
