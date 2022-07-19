@@ -1,0 +1,2 @@
+#打包指定服务包
+mvn clean package -pl lzmh-modules/lzmh-system -am -P dev -DskipTests=true
