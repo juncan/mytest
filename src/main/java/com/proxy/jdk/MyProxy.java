@@ -1,4 +1,4 @@
-package com.proxy;
+package com.proxy.jdk;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;

@@ -1,4 +1,4 @@
-package com.proxy;
+package com.proxy.jdk;
 
 /**
  * 老师接口
