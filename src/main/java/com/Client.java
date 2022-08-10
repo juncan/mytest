@@ -18,6 +18,7 @@ import cn.hutool.http.HttpResponse;
 import cn.hutool.http.HttpUtil;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
+import com.cbf4life.adapter.UserInfo;
 import com.constant.GuardTypeEnum;
 import com.core.utils.CommonUtils;
 import com.core.utils.CronUtils;
@@ -25,8 +26,10 @@ import com.core.utils.CurrencyUtil;
 import com.core.utils.ShareCodeUtil;
 import com.enums.PayTagsEnum;
 import com.google.common.base.Joiner;
+import com.jdk8.stream.Person;
 import com.psbc.Signature;
 import com.test.constants.FindMoreTypeEnum;
+import lombok.extern.slf4j.Slf4j;
 import net.rubyeye.xmemcached.KeyProvider;
 import org.apache.commons.lang3.CharUtils;
 import org.apache.commons.lang3.StringUtils;
@@ -58,6 +61,7 @@ import java.util.regex.Pattern;
  * @ClassName Client
  * @create 2018-10-10 15:53
  */
+@Slf4j
 public class Client {
     public static void main(String[] args) throws FileNotFoundException {
 
@@ -77,6 +81,21 @@ public class Client {
         list.get(0);
 
         list.get(1);
+
+        Person person = new Person("c", null);
+        Integer i = person == null ? Integer.valueOf(1) : person.getAge();
+        System.out.println(i);
+
+        String shareUserId = null;
+        log.info("分享人Id:{}", shareUserId);
+
+        for (List<Integer> integers : list) {
+            for (int k = 0; k < 5; k++) {
+                break;
+            }
+            System.out.println("111j");
+        }
+        System.out.println("wwee");
 
 //        list.forEach(data->{
 //            System.out.println(data);

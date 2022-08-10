@@ -1,0 +1,22 @@
+version: '3.8'
+services:
+  lzmh-app:
+    container_name: lzmh-app
+    image: lzmh-app
+    network_mode: host
+    build:
+      context: ./
+      dockerfile: dockerfile
+    restart: always
+    volumes:
+      - ./logs:/usr/local/docker/service/app/logs/lzmh-app
+    ports:
+      - "40100:40100"
+    extra_hosts:
+      - "lzmh-gateway:192.168.1.53"
+      - "lzmh-register:192.168.1.53"
+      - "lzmh-redis:192.168.1.53"
+      - "lzmh-mysql:192.168.1.53"
+      - "lzmh-rocketmq:192.168.1.53"
+      - "lzmh-es:192.168.1.53"
+      - "lzmh-mongo:192.168.1.53"

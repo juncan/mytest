@@ -1,0 +1,5 @@
+FROM openjdk:8-jdk-alpine
+ADD lzmh-app.jar /usr/local/docker/service/app/
+WORKDIR /usr/local/docker/service/app
+RUN ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+CMD java -Xms128m -Xmx256m -jar lzmh-app.jar
