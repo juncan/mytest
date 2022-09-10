@@ -22,6 +22,7 @@ public class SmallTool {
                 .add(Thread.currentThread().getName())
                 .add(tag)
                 .toString();
+
         System.out.println(result);
     }
 }
