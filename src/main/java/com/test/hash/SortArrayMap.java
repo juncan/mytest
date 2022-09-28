@@ -1,7 +1,5 @@
 package com.test.hash;
 
-import com.sun.glass.ui.Size;
-
 import java.util.Arrays;
 import java.util.Comparator;
 
