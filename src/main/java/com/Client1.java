@@ -1,14 +1,25 @@
 package com;
 
 import cn.hutool.core.convert.Convert;
-import cn.hutool.core.date.LocalDateTimeUtil;
-import cn.hutool.core.date.Week;
+import cn.hutool.core.date.*;
+import cn.hutool.core.util.RandomUtil;
+import cn.hutool.core.util.StrUtil;
+import cn.hutool.crypto.SecureUtil;
 import org.gavaghan.geodesy.Ellipsoid;
 import org.gavaghan.geodesy.GeodeticCalculator;
 import org.gavaghan.geodesy.GeodeticCurve;
 import org.gavaghan.geodesy.GlobalCoordinates;
 
+import java.math.BigDecimal;
+import java.time.DayOfWeek;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
+import java.time.temporal.TemporalAdjusters;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.regex.Pattern;
 
 /**
  * @author xingkong
@@ -22,9 +33,90 @@ public class Client1 {
 //            Thread.sleep(1000);
 //            System.out.println(123);
 //        }
-        Week dayOfWeek = LocalDateTimeUtil.dayOfWeek(LocalDate.of(2022, 9, 25));
+//        Week dayOfWeek = LocalDateTimeUtil.dayOfWeek(LocalDate.of(2022, 9, 25));
+//
+//        testGPS();
+        List<GoodsEntry> entryList = new ArrayList<>();
+        GoodsEntry goodsEntry = new GoodsEntry();
+        goodsEntry.setEntryTime(LocalDateTime.now());
+        goodsEntry.setEntryPrice(BigDecimal.valueOf(30000L));
+        entryList.add(goodsEntry);
 
-        testGPS();
+        GoodsEntry goodsEntry1 = new GoodsEntry();
+        goodsEntry1.setEntryTime(LocalDateTime.now());
+        goodsEntry1.setEntryPrice(BigDecimal.valueOf(300L));
+        entryList.add(goodsEntry1);
+
+        List<List<GoodsEntry>> result = splitGoodsEntry(entryList);
+        System.out.println(result);
+
+        LocalDate today = LocalDate.now();
+        String monday = today.with(TemporalAdjusters.previousOrSame(DayOfWeek.MONDAY)).toString();
+        String sunday = today.with(TemporalAdjusters.nextOrSame(DayOfWeek.SUNDAY)).toString();
+
+        String replace = StrUtil.replace("QX_XM_XCX  \t \r\n", "\\s*|\t|\r|\n",parameter -> parameter.replaceAll(""));
+        String start = LocalDateTimeUtil.format(LocalDateTimeUtil.parse("2022-10-18 00:00:21", DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")),
+                DateTimeFormatter.ofPattern("yyyyMMdd"));
+
+        String replace1 = "2022-10-18 00:00:21".substring(0, 10).replace("-", "");
+
+        System.out.println(monday);
+
+        System.out.println(BigDecimal.ZERO.setScale(2));
+
+        System.out.println(Convert.toLong("undefined", -1L) == -1L);
+
+        System.out.println(BigDecimal.valueOf(3.5));
+
+        List<DateTime> result11 = DateUtil.rangeToList(DateUtil.parse("2022-10-01", "yyyy-MM-dd"),
+                DateUtil.parse("2022-12-01", "yyyy-MM-dd"), DateField.DAY_OF_YEAR);
+        System.out.println(result11);
+
+
+        Long supplySiteId = 0L;
+        if(supplySiteId == null || supplySiteId == 0L){
+            System.out.println("111");
+        }
+
+        String itemSn = "XDQXWXMFJFZS221018190956YCTIBDT5";
+        
+
+        System.out.println(itemSn.split(",")[0]);
+
+        LocalDateTime mdd = Convert.toLocalDateTime("");
+        System.out.println(mdd);
+
+        for (int i = 0; i < 10; i++) {
+            System.out.println(RandomUtil.randomInt(100000000,1000000000));
+        }
+
+        System.out.println(LocalDateTimeUtil.now().format(DateTimeFormatter.ofPattern("yyyyMMdd")));
+
+        int i = 1;
+        System.out.println(i++);
+        i = 1;
+        System.out.println(++i);
+    }
+
+    private static List<List<GoodsEntry>> splitGoodsEntry(List<GoodsEntry> entryList) {
+        List<List<GoodsEntry>> allList = new ArrayList<>();
+        //提现记录按最高提现金额分批生成结算单
+        BigDecimal addPrice = BigDecimal.ZERO;
+        List<GoodsEntry> partList = new ArrayList<>();
+        for (GoodsEntry goodsEntry : entryList) {
+            if (goodsEntry.getEntryPrice().compareTo(BigDecimal.valueOf(30000L)) > 0) {
+                throw new RuntimeException("单笔金额超出提现最高额度");
+            }
+            addPrice = addPrice.add(goodsEntry.getEntryPrice());
+            if (addPrice.compareTo(BigDecimal.valueOf(30000L)) > 0) {
+                addPrice = goodsEntry.getEntryPrice();
+                allList.add(partList);
+                partList = new ArrayList<>();
+            }
+            partList.add(goodsEntry);
+        }
+        allList.add(partList);
+        return allList;
     }
 
     public static void testGPS() {
