@@ -97,6 +97,8 @@ public class Client {
         }
         System.out.println("wwee");
 
+        System.out.println(LocalDateTime.now().plusDays(0));
+
 //        list.forEach(data->{
 //            System.out.println(data);
 //        });
