@@ -8,6 +8,7 @@ import cn.hutool.core.date.LocalDateTimeUtil;
 import cn.hutool.core.map.MapUtil;
 import cn.hutool.core.util.EnumUtil;
 import cn.hutool.core.util.IdUtil;
+import cn.hutool.core.util.RandomUtil;
 import cn.hutool.core.util.StrUtil;
 import cn.hutool.crypto.SecureUtil;
 import cn.hutool.crypto.asymmetric.SignAlgorithm;
@@ -98,6 +99,23 @@ public class Client {
         System.out.println("wwee");
 
         System.out.println(LocalDateTime.now().plusDays(0));
+
+        int start = 0;
+        int end = 502;
+        List<String> dataStrList = new ArrayList<>();
+        for (int j = 0; j < end; j++) {
+            dataStrList.add(RandomUtil.randomString(10));
+        }
+        int size = dataStrList.size();
+        do {
+            List<String> sbList = ListUtil.sub(dataStrList, start, start + 100);
+            System.out.println(sbList.toString());
+            start = start + 100;
+        } while (start < size);
+
+        if (LocalTime.now().isAfter(LocalTime.parse("10:50"))) {
+            System.out.println("111");
+        }
 
 //        list.forEach(data->{
 //            System.out.println(data);
