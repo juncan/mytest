@@ -1,61 +1,32 @@
 package com;
 
-import cn.hutool.core.collection.ListUtil;
-import cn.hutool.core.date.DatePattern;
-import cn.hutool.core.date.DateUnit;
-import cn.hutool.core.date.DateUtil;
-import cn.hutool.core.date.LocalDateTimeUtil;
-import cn.hutool.core.map.MapUtil;
-import cn.hutool.core.util.EnumUtil;
-import cn.hutool.core.util.IdUtil;
-import cn.hutool.core.util.RandomUtil;
+import cn.hutool.core.convert.Convert;
 import cn.hutool.core.util.StrUtil;
-import cn.hutool.crypto.SecureUtil;
-import cn.hutool.crypto.asymmetric.SignAlgorithm;
-import cn.hutool.crypto.symmetric.AES;
-import cn.hutool.crypto.symmetric.SymmetricAlgorithm;
+import cn.hutool.crypto.symmetric.SM4;
+import cn.hutool.crypto.symmetric.SymmetricCrypto;
 import cn.hutool.http.HttpRequest;
-import cn.hutool.http.HttpResponse;
 import cn.hutool.http.HttpUtil;
-import com.alibaba.fastjson.JSON;
+import cn.hutool.json.JSONUtil;
 import com.alibaba.fastjson.JSONObject;
-import com.cbf4life.adapter.UserInfo;
-import com.constant.GuardTypeEnum;
-import com.core.utils.CommonUtils;
-import com.core.utils.CronUtils;
-import com.core.utils.CurrencyUtil;
-import com.core.utils.ShareCodeUtil;
-import com.enums.PayTagsEnum;
-import com.google.common.base.Joiner;
-import com.jdk8.stream.Person;
-import com.psbc.Signature;
-import com.test.constants.FindMoreTypeEnum;
+import com.sun.xml.internal.bind.v2.runtime.output.SAXOutput;
+import com.test.PayNotifyOrderReqVO;
 import lombok.extern.slf4j.Slf4j;
-import net.rubyeye.xmemcached.KeyProvider;
-import org.apache.commons.lang3.CharUtils;
-import org.apache.commons.lang3.StringUtils;
-import org.apache.commons.lang3.time.DateUtils;
+import org.bouncycastle.jce.provider.BouncyCastleProvider;
 
-import java.io.*;
-import java.math.BigDecimal;
-import java.math.RoundingMode;
+import java.io.FileNotFoundException;
 import java.net.InetAddress;
-import java.net.URLEncoder;
 import java.net.UnknownHostException;
 import java.nio.charset.StandardCharsets;
-import java.security.PrivateKey;
+import java.security.Security;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.time.Duration;
-import java.time.LocalDate;
 import java.time.LocalDateTime;
-import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
-import java.time.temporal.TemporalAdjusters;
 import java.util.*;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
+
+import static cn.hutool.crypto.Mode.ECB;
+import static cn.hutool.crypto.Padding.NoPadding;
 
 /**
  * @author wujc
@@ -64,375 +35,124 @@ import java.util.regex.Pattern;
  */
 @Slf4j
 public class Client {
+
+    static{
+        Security.addProvider(new BouncyCastleProvider());
+    }
+    private final static String SPLIT_STR = "-";
     public static void main(String[] args) throws FileNotFoundException {
+        //JsonConvert2Map();
+        //Sm4();
 
-        List<Integer> dataList = new ArrayList<>();
+        //System.out.println(new BigDecimal("000000009900").longValue());
+        //PayNotifyOrderReqVO data = new PayNotifyOrderReqVO();
+        //
+        //if (1 == 1 || "111".equals("212")) {
+        //    System.out.println("2121");
+        //}
+        //
+        //String str = "{\"biz_content\":\"TKk5cqdJaNOrlZWt8qe/jE5Au/yKnf7cqVJTmwdvbQKy5a2xmWBofs2bAysSr8dbrddrTGV8mG6EOO+GVIaXX4sPBK6znWxp" +
+        //        "/pRPhnUlY2K7O3RiI+q1QV03616h+JHNAw3iS8XAht6sv8ehWTwJvz9ZQeJ3E3TXM+gOIKee+HbFHZwfGg4BglZf4pEXXiSM/IRfzBnZnNGJGrvv" +
+        //        "+hHGrsgqik2jj8WqHRm25kLpqP1lDfXqyNepttHVWMELFXn5lzqBjztQ8KCK3AApoT9AotxFFxirH91jO1z3vEMdiALxjmv1a6fWHDKknMBvW7i0nVN6Usn98kcIZRwrTvMVe6Sk9w0IaiIfgBcb5I9q4bJ9DcnYfQ9BsPFCrojPFa0Pg3o10k486IqJM2jrzZ95K02pjrhdmrnja+inwFBjHm1JUfpCWh2Fk3vWWNJKgfpBJmFlnQlrnnsm618rZ8vKZpPLB7uuQ73H6HyX5oXz878UmyDW1Oub6npYO6PnLkYf3+geVeAChXITTQxoRJTWMnvxii942FJ6Dr7vbx6E8SAEu6Y1vcdWGq91n1YcE38/s2XK6iMSWbsw19B4c6iabg==\",\"msg_id\":\"a7a16117ad1b4d7994e153dc681449ef\",\"timestamp\":\"2023-05-31 17:08:24\",\"encrypt_key\":\"IWBWSQI1n4wtMAnghdmeFTy2YxExahJBqtYrlEcI/6XD9CBvfL1Tbacq0ZveSByEaC6P34+PJgHYqr40ArmAUw8Kg3gLY5YeGbpL8c8YHZYnVzrCuLqCy9tiVIoimZoQtZtgXXwL+iVqwhEzTdYGIhO0F8pBbFE4pVlYpv9FWBDzA6BkHKQx8qr61fESnLry+PraoxQNMNjfViHmjmSpWiy5+FFP9xZnXCSP3RPuOgKtWn1f5M7UT7g9a+PkjzHI1hnO/aUB8rnO9EQWxrV7BNc3CsTyGHcJz4G1GEPyFozFNryH04ISGVxRFTaKvFjimqddLd/Qbe0n4DS8wnHriw==\",\"sign\":\"KEfJLAyFXSLBpU66LM5u9gCVU9YQGnhczdltysTc8NM1wlRmVK0hdNDEgk/wg3XVNw1zXMRoOQShb/6X+pmx6P/+Iem+VNluBI8mqgGyClnsRf3qYctb1ctOjf2EgkU8Pr/PkpSMJXau+PTuoGNA6TM/Z4+1eJjQIcXNQ/eGlFPcnt5NFgm4VhX7rB8bcbDf5AtGtqc+Lc84Qyq9N8nwyMWEuibSHOcxnZKIAkGj0UGi+h7ujA3pts/USK3/gzR+DQs8lYO/PQ0Kf4miqSHO6sRDD+0fte7Ljx1JSbaHt8hRVU+pQWMoo6r6NmNjWOA4K3D9oG6AChtYC2S2ZE1hOQ==\"}\n";
+        //
+        //System.out.println(JSONUtil.toBean(str, LinkedHashMap.class));
 
-        for (int i = 0; i < 1000; i++) {
-            dataList.add(i);
-        }
+        //calUrl();
 
+        System.out.println(Convert.toStr(Convert.toBool(1)));
 
-        for (int i = 12; i < 1; i--) {
-            System.out.println(i);
-        }
+        dealIdentity("斤斤计较bbnnnbx,450481197804234431,你们慢慢慢慢慢慢呢,450481197804234431,慢慢慢性病不错不错不好,450481197804234431");
 
-        List<List<Integer>> list = ListUtil.split(dataList, 100);
+    }
 
-        list.get(0);
-
-        list.get(1);
-
-        Person person = new Person("c", null);
-        Integer i = person == null ? Integer.valueOf(1) : person.getAge();
-        System.out.println(i);
-
-        String shareUserId = null;
-        log.info("分享人Id:{}", shareUserId);
-
-        for (List<Integer> integers : list) {
-            for (int k = 0; k < 5; k++) {
-                break;
+    private static void dealIdentity(String  data) {
+        //身份信息
+        StringBuilder idCardBd = new StringBuilder();
+        if (StrUtil.isNotBlank(data)) {
+            List<String> idCardList = Arrays.asList(data.split(","));
+            for (int i = 0; i < idCardList.size(); i++) {
+                String s = idCardList.get(i);
+                if ((i+1) % 2 == 0) {
+                    idCardBd.append(s).append((char) 10);
+                } else {
+                    idCardBd.append(s).append(":");
+                }
             }
-            System.out.println("111j");
+            System.out.println(idCardBd.toString());
         }
-        System.out.println("wwee");
+    }
 
-        System.out.println(LocalDateTime.now().plusDays(0));
+    private static void buildTree() {
 
-        int start = 0;
-        int end = 502;
-        List<String> dataStrList = new ArrayList<>();
-        for (int j = 0; j < end; j++) {
-            dataStrList.add(RandomUtil.randomString(10));
+    }
+
+    private static void JsonConvert2Map() {
+        JSONObject jsonObject = new JSONObject();
+        jsonObject.put("data", "212");
+        jsonObject.put("sn", "212");
+        Map<String, String> toMap = Convert.toMap(String.class, String.class, jsonObject);
+        System.out.println(toMap);
+    }
+
+    public static void calUrl() {
+        Map<String, String> extra = new HashMap<>();
+        extra.put("platformType", "ONLINE");
+        extra.put("billFundsDesc", "121311");
+        Object request = PayNotifyOrderReqVO.builder().merchantOrderId("21212322")
+                .payOrderId(111L).channelCode("UNION_PAY_WX_MINI")
+                .extra(extra).build();
+
+        String response = HttpUtil.post("http://192.168.1.60:40100/pay/notify/public", JSONUtil.toJsonStr(request),
+                (int) 120 * 1000);
+
+        System.out.println(response);
+
+
+    }
+
+    private static void Sm4() {
+        String secretKey = "E5E7518D64184683ADF53009192B2CFC";
+        String content = "{\"mobile\":\"13111444587\"}";
+
+        SymmetricCrypto sm4 = new SM4(ECB, NoPadding, secretKey.getBytes());
+        byte[] data = padding(content);
+
+        System.out.println(sm4.encryptHex(data));
+    }
+
+    // 在NoPadding模式下需要手动对齐16字节的倍数
+    public static byte[] padding(String arg_text) {
+        byte[] encrypt = arg_text.getBytes();
+
+        if (encrypt.length % 16 != 0) { // not a multiple of 8
+            // create a new array with a size which is a multiple of 8
+            byte[] padded = new byte[encrypt.length + 16 - (encrypt.length % 16)];
+
+            // copy the old array into it
+            System.arraycopy(encrypt, 0, padded, 0, encrypt.length);
+            encrypt = padded;
         }
-        int size = dataStrList.size();
-        do {
-            List<String> sbList = ListUtil.sub(dataStrList, start, start + 100);
-            System.out.println(sbList.toString());
-            start = start + 100;
-        } while (start < size);
+        return encrypt;
+    }
 
-        if (LocalTime.now().isAfter(LocalTime.parse("10:50"))) {
-            System.out.println("111");
+
+    private String getConcatInfo(SettleOrdBill bill) {
+        StTypeEnum typeEnum = StTypeEnum.valueOf(bill.getStType());
+        String groupBy = "";
+        switch (typeEnum) {
+            case MERCHANT:
+                groupBy =  bill.getStType() + SPLIT_STR + bill.getMerchantId() + SPLIT_STR + bill.getSettleStatus();
+                break;
+            case STORE:
+                groupBy =  bill.getStType() + SPLIT_STR + bill.getStoreId() + SPLIT_STR + bill.getSettleStatus();
+                break;
+            case SITE:
+                groupBy =  bill.getStType() + SPLIT_STR + bill.getSiteId() + SPLIT_STR + bill.getSettleStatus();
+                break;
+            default:
         }
 
-//        list.forEach(data->{
-//            System.out.println(data);
-//        });
-
-//        String powerName = "admin,xiaowu";
-//        if ("admin".indexOf(powerName) > -1) {
-//            System.out.println("true");
-//        }
-//
-//        Double dl = 34.9;
-//        Double d2 = 34.9;
-//        if (d2.equals(dl)) {
-//            System.out.println("ok");
-//        }
-//
-//        System.out.println(System.currentTimeMillis() / 1000);
-//
-//        Date end_time = DateUtil.parse("2020-05-31", "yyyy-MM-dd");
-//        Calendar calendar = new GregorianCalendar();
-//        calendar.setTime(end_time);
-//        calendar.add(Calendar.DATE, 1);
-//        end_time = calendar.getTime();
-//        System.out.println(end_time);
-//
-//
-//      /*  Object obj1 = new FileReader(new File("1.dat"));
-//        Object obj3 = new BufferedReader(new FileReader("1.dat"));
-//        Object obj4 = new FileInputStream(new File("1.dat"));*/
-//
-//        int[] a1 = {3, 4, 5};
-//
-//        int[][] a2 = new int[3][3];
-//        String a3[] = {"string1", "string2", "string3"};
-//        String a4[] = new String[]{"string4", "string5", "string6"};
-//
-//        BigDecimal joinRate =
-//                new BigDecimal(3).divide(new BigDecimal(26), 4, RoundingMode.HALF_UP).multiply(new BigDecimal(100));
-//        System.out.println(joinRate);
-//        System.out.println("md5:" + SecureUtil.md5().toString());
-//
-//        String str = HttpUtil.get("http://weixin.img.upload.meisuitv.com/ba9afa43fa4b47e08f1924136da15291" +
-//                ".zip?qhash/md5");
-//        System.out.println(str);
-//
-//        /*String a = "sfhsfj";
-//        exchange(a);
-//        System.out.println("mian a:" + a);*/
-//
-//        /*BigDecimal ss = new BigDecimal(0.10);
-//
-//        if (!(ss.compareTo(BigDecimal.ZERO) == 0)) {
-//            System.out.println("true");
-//        }
-//
-//        if (ss.equals(0)) {
-//            System.out.println("true");
-//        }
-//
-//        Date old = new Timestamp(System.currentTimeMillis()-1);
-//        if (old.before(new Date())) {
-//            System.out.println("true");
-//        }
-//
-//        if ((23 == 22) && (100 / 0 == 0))
-//            System.out.println("运算没有问题。");
-//        else
-//            System.out.println("没有报错");
-//*/
-//        /*String title = "哈哈回复后（但是）+（南大厦）";
-//        title = title.replace("（", "、");
-//        System.out.println(title);
-//
-//        switch (0) {
-//            case 1:
-//                break;
-//            case 2:
-//                break;
-//            default:
-//
-//        }*/
-//        /*String idCard = "56032119930512811X";
-//        //System.out.println(IdCardCheckUtil.IDCardValidate(idCard));
-//        *//*System.out.println(Integer.parseInt("0"));*//*
-//        System.out.println(getIP("nss-public.yoya.com"));
-//        for (int i = 0; i < 32; i++) {
-//            for (int j = 0; j < 21; j++) {
-//                System.out.println(i);
-//                if (j == 12) {
-//                    return;
-//                }
-//            }
-//        }
-//        operateStream();*/
-//        //updateFirst();
-//
-//        /*List<String> list = new ArrayList<String>();
-//        list.add("a");
-//        list.add("b");
-//        list.add("c");
-//        list.add("d");
-//        list.add("e");
-//        list.add(0, "f");
-//        System.out.println(list);*/
-//        /*Charset utf8 = Charset.forName("UTF-8");
-//        ByteBuf buf = Unpooled.copiedBuffer("Netty in Action rocks!", utf8); //1
-//
-//        ByteBuf sliced = buf.slice(0, 14);          //2
-//        System.out.println(sliced.toString(utf8));  //3
-//
-//        buf.setByte(0, (byte) 'J');                 //4
-//        assert buf.getByte(0) == sliced.getByte(0);*/
-//        BigDecimal rate =
-//                new BigDecimal(3).divide(new BigDecimal(7), 4, RoundingMode.HALF_UP).multiply(new BigDecimal(100));
-//        System.out.println(rate.toString());
-//        if ((23 == 23) || (100 / 0 == 0))
-//            System.out.println("运算没有问题。");
-//        else
-//            System.out.println("没有报错");
-//
-//        System.out.println(fibonacci(10));
-//
-//
-//        Date date = strToDate("2019-10-14 00:00:00");
-//        System.out.println(date.toString());
-//
-//        if ("14:51".compareTo("14:50") > 0) {
-//            System.out.println("能比较");
-//        }
-//
-//        String dateStr = dateToStr(new Date(), "MM月-dd日");
-//        System.out.println(dateStr);
-//
-//        String userAgent = ("User-Agent:Mozilla/5.0 (iPhone; CPU iPhone OS 8_0_2 like Mac OS X) AppleWebKit/600.1.4 " +
-//                "(KHTML, like Gecko) Version/8.0 Mobile/12A366 Safari/600.1.4").toLowerCase();
-//        String regEx = "micromessenger|ipad|iphone|ipod|android|yoya-ios|yoya-android";
-//        Pattern pattern = Pattern.compile(regEx);
-//        Matcher matcher = pattern.matcher(userAgent);
-//        if (matcher.find()) {
-//            System.out.println("或时间福建省");
-//        }
-//
-//        char[] c = {'h', 'e', 'l', 'l', 'o'};
-//        reverseString(c);
-//
-//
-//        Date futureDate = addDate(10);
-//        long ts = (futureDate.getTime() - System.currentTimeMillis()) / 1000;
-//        System.out.println(ts);
-//
-//        System.out.println(CronUtils.getCron(new Date()));
-//
-//        String is_anchor = "0";
-//        if (StringUtils.isBlank(is_anchor) || !is_anchor.equals("1")) {
-//            System.out.println("fsfkjs");
-//        }
-//
-//        int num = 0;
-//        try {
-//            for (int i = 0; i < 200; i++) {
-//                if (i == 1) {
-//                    int ss = i / 0;
-//                }
-//                num++;
-//            }
-//        } catch (Exception e) {
-//
-//        }
-//        System.out.println(num);
-//
-//        if (true && !false) {
-//            System.out.println("test");
-//        }
-//
-//        System.out.println(CommonUtils.mobileEncrypt("18350211269"));
-//
-//        System.out.println("20.20".compareTo("20.1"));
-//
-//        StringBuilder stringBuilder = new StringBuilder();
-//        stringBuilder.append("fsaf:2121,sdasdd:2121,");
-//        String value = stringBuilder.toString().substring(0, stringBuilder.length() - 1);
-//        System.out.println(value);
-//        System.out.println("邀请码：" + ShareCodeUtil.idToCode("1"));
-//
-//        System.out.println("2123".indexOf("1"));
-//
-//        if (true && false) {
-//            System.out.println("true");
-//        }
-//
-//        System.out.println(GuardTypeEnum.valueOf("MONTHLY").getCode());
-//
-//        BigDecimal a = new BigDecimal(0.1);
-//
-//        System.out.println(Integer.MAX_VALUE);
-//
-//        //System.out.println(LocalDateTime.parse(DateUtil.format(new Date(), DatePattern.NORM_DATE_PATTERN)+"
-//        // 00:00:00"));
-//
-//        System.out.println(DateUtil.beginOfWeek(new Date()));
-//
-//        System.out.println(DateUtil.endOfWeek(new Date()));
-//
-//        System.out.println(DateUtil.betweenDay(new Date(), DateUtil.offsetDay(new Date(), 1), true));
-//        //System.out.println(FindMoreTypeEnum.valueOf("超值好货").getCode());
-//
-//        Map<String, Object> data = new HashMap<>();
-//        data.put("startTime", new Date());
-//        Date startTime = MapUtil.getDate(data, "startTime");
-//        System.out.println(startTime);
-//        try {
-//            for (int i = 0; i < 100; i++) {
-//                if (i == 50) {
-//                    i = i / 0;
-//                }
-//                System.out.println(i);
-//            }
-//        } catch (Exception e) {
-//            System.out.println(e);
-//        }
-//
-//
-//        String str11 = "{\n" +
-//                "  \"CallbackCommand\": \"C2C.CallbackBeforeSendMsg\", // 回调命令\n" +
-//                "  \"From_Account\": \"jared\", // 发送者\n" +
-//                "  \"To_Account\": \"Jonh\", // 接收者\n" +
-//                "  \"MsgSeq\": 48374, // 消息序列号\n" +
-//                "  \"MsgRandom\": 2837546, // 消息随机数\n" +
-//                "  \"MsgTime\": 1557481126, // 消息的发送时间戳，单位为秒 \n" +
-//                "  \"MsgKey\": \"48374_2837546_1557481126\", //消息的唯一标识，可用于 REST API 撤回单聊消息\n" +
-//                "  \"MsgBody\": [ // 消息体，参见 TIMMessage 消息对象\n" +
-//                "      {\n" +
-//                "          \"MsgType\": \"TIMTextElem\", // 文本\n" +
-//                "          \"MsgContent\": {\n" +
-//                "              \"Text\": \"red packet\"\n" +
-//                "          }\n" +
-//                "      }\n" +
-//                "  ]\n" +
-//                "}";
-//       /* JSONObject body = JSON.parseObject(str11);
-//        System.out.println(body.getJSONArray("MsgContent").toJSONString());*/
-//
-//
-//        Duration duration = LocalDateTimeUtil.between(LocalDateTime.now(), LocalDateTime.now().plusHours(-1));
-//        System.out.printf(duration.toMillis() + "");
-//
-//
-//        String ftUrl = Joiner.on("").join("FT_CORPID=", 11, "&FT_TILEID=",
-//                11,
-//                "&FT_SCENARIO=", 22, "&FT_ORDERNO=", 222,
-//                "&CUSTOMERID=", 423, "&USERID=", 555, "&PASSWORD=",
-//                88,
-//                "&TXCODE=", "5WX004", "&LANGUAGE=CN&CCB_IBSVersion=V6&PT_STYLE=F&resType=jsp",
-//                "&MONEY=", 434, "&Enqr_StDt=", 997, "&Enqr_CODt=",
-//                3434, "&ORDER=", 8878);
-//
-//        StringBuilder sb = new StringBuilder(ftUrl);
-//        if (StrUtil.isNotBlank("wq23q")) {
-//            sb.append("&MsgRp_Jrnl_No=").append("323");
-//        }
-//
-//        BigDecimal result = BigDecimal.valueOf(12L);
-//
-//        System.out.println(result.add(result.negate()));
-//
-//        PayTagsEnum payTagsEnum = EnumUtil.fromString(PayTagsEnum.class, "ewqwe", null);
-//
-//
-//        LocalTime localTime = LocalTime.parse("20:13");
-//
-//        System.out.println(LocalTime.now());
-//
-//        String content = "test中文";
-//
-//        //随机生成密钥
-//        byte[] key = SecureUtil.generateKey(SymmetricAlgorithm.AES.getValue()).getEncoded();
-//
-//        //构建
-//        AES aes = SecureUtil.aes(key);
-//
-//        //加密
-//        byte[] encrypt = aes.encrypt(content);
-//         //解密
-//        byte[] decrypt = aes.decrypt(encrypt);
-//
-//        long between = DateUtil.between(DateUtil.date(), DateUtil.endOfDay(new Date())
-//                , DateUnit.SECOND);
-//        System.out.println(between);
-//
-//        System.out.println(IdUtil.simpleUUID());
-//
-//        System.out.println(DateUtil.format(DateUtil.yesterday(),DatePattern.PURE_DATE_PATTERN));
-//
-//        LocalDateTime.now().plusMonths(1).with(TemporalAdjusters.firstDayOfMonth()).plusDays(1);
-//
-//        System.out.println(LocalDateTime.now().getDayOfMonth() );
-//
-//
-//        System.out.println(CurrencyUtil.mul(new BigDecimal("0.01"), new BigDecimal("0.09")));
-//
-//        Map<String, Object> paramMap = new HashMap<>();
-//        paramMap.put("CCB_IBSVersion", "V6");
-//        paramMap.put("MERCHANTID", 1);
-//        paramMap.put("POSID", 1);
-//        paramMap.put("BRANCHID", 1);
-//        paramMap.put("ORDERID", 11);
-//        paramMap.put("PAYMENT",1);
-//        paramMap.put("CURCODE", "01");
-//        paramMap.put("TXCODE", "HT0000");
-//        String mac = SecureUtil.hmacMd5(
-//                "30819d300d06092a864886f70d01010150003818b00308187028181009c355967993e99186e6df9b80d75d9b397f8b428e7af0e0eddc13a35 12bbfb3f743dfb62c52f8f391bb760ce2a3f8d6c39bc56c30bd0781bb4a7aa9d95440a3a3786a65a53ec604f859b75153f73471d58a15cc391049cb406928fc9f698e986735d7580d550ab3648f767c5be813aaa0ab01b8cf020111\n").digestHex(HttpUtil.toParams(paramMap));
-//        System.out.println("http://128.196.119.53:8101/CCBIS/ccbMain_XM"+HttpUtil.toParams(paramMap));
-//        //HttpResponse response = HttpUtil.createPost("http://128.196.119.53:8101/CCBIS/ccbMain_XM"+HttpUtil.toParams(paramMap)).execute();
-//
-//        //System.out.println(response.toString());
-//
-//        PSBCPOST();
+        return groupBy;
     }
 
     private static void PSBCPOST() {
